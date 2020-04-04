@@ -19,22 +19,22 @@ export default Vue.extend({
       paragraphs: [
         {
           title: "Frontend",
-          text: "React.js, Angular.js, Typescript, Vue.js"
+          text: "React.js, Angular.js, Typescript, Vue.js",
         },
         {
           title: "Backend",
-          text: "Python, Node.js, C++, Java"
+          text: "Python, Node.js, C++, Java",
         },
         {
           title: "Databases",
-          text: "MySQL, ElasticSearch, MongoDB"
+          text: "MySQL, ElasticSearch, MongoDB",
         },
         {
           title: "Deployments",
-          text: "Kubernetes, Elastic Beanstalk, Code Pipeline, Docker"
-        }
-      ]
+          text: "Kubernetes, Elastic Beanstalk, Code Pipeline, Docker",
+        },
+      ],
     };
-  }
+  },
 });
 </script>

@@ -2,10 +2,11 @@
   <router-link
     class="continue-button"
     v-bind:class="{
-      'animation': animate
+      animation: animate,
     }"
     :to="route"
-    >{{ buttonText }}<span class="forward-icon" /></router-link>
+    >{{ buttonText }}<span class="forward-icon"
+  /></router-link>
 </template>
 
 <script>
@@ -16,7 +17,7 @@ export default Vue.component("continueButton", {
     buttonText: String,
     route: String,
     animate: Boolean,
-  }
+  },
 });
 </script>
 
@@ -40,7 +41,7 @@ export default Vue.component("continueButton", {
   height: 30px;
   width: 30px;
   margin-left: 15px;
-  opacity: 0.8; 
+  opacity: 0.8;
 }
 .animation {
   animation-name: wiggle;
@@ -48,17 +49,5 @@ export default Vue.component("continueButton", {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-delay: 0s;
-}
-
-
-@media screen and (min-width: 800px) {
-  button {
-    
-  }
-}
-@media screen and (min-width: 1000px) {
-  button {
-    
-  }
 }
 </style>

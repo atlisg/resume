@@ -26,13 +26,13 @@ export default Vue.extend({
           links: [
             {
               linkText: "dohop.com",
-              url: "https://dohop.com"
+              url: "https://dohop.com",
             },
             {
               linkText: "worldwide.easyjet.com",
-              url: "https://worldwide.easyjet.com"
-            }
-          ]
+              url: "https://worldwide.easyjet.com",
+            },
+          ],
         },
         {
           title: "Software Engineer at Code North, May 2016 - Sep 2017",
@@ -43,9 +43,9 @@ export default Vue.extend({
           links: [
             {
               linkText: "codenorth.com",
-              url: "https://www.codenorth.com"
-            }
-          ]
+              url: "https://www.codenorth.com",
+            },
+          ],
         },
         {
           title:
@@ -57,9 +57,9 @@ export default Vue.extend({
           links: [
             {
               linkText: "ru.is",
-              url: "https://www.ru.is"
-            }
-          ]
+              url: "https://www.ru.is",
+            },
+          ],
         },
         {
           title:
@@ -71,12 +71,12 @@ export default Vue.extend({
           links: [
             {
               linkText: "hljodfaerahusid.is",
-              url: "https://www.hljodfaerahusid.is/"
-            }
-          ]
-        }
-      ]
+              url: "https://www.hljodfaerahusid.is/",
+            },
+          ],
+        },
+      ],
     };
-  }
+  },
 });
 </script>

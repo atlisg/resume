@@ -4,7 +4,9 @@
       <p v-if="p.title" class="paragraph-title">{{ p.title }}</p>
       <p v-if="p.about" class="paragraph-about">{{ p.about }}</p>
       <p v-if="p.text" class="paragraph-text">{{ p.text }}</p>
-      <a v-if="p.email" class="paragraph-link" :href="`mailto:${p.email}`">{{ p.email }}</a>
+      <a v-if="p.email" class="paragraph-link" :href="`mailto:${p.email}`">{{
+        p.email
+      }}</a>
       <a
         v-for="link in p.links"
         v-bind:key="link.linkText"
@@ -21,7 +23,7 @@
 import Vue from "vue";
 
 export default Vue.component("textBody", {
-  props: ["paragraphs"]
+  props: ["paragraphs"],
 });
 </script>
 

@@ -19,35 +19,38 @@ export default Vue.extend({
       paragraphs: [
         {
           title: "My online résumé",
-          text: "I created this project in March 2020 to familiarize myself with the Javascript framework Vue.js, when I decided to update my résumé. At first glance, I really like it. At least for a small project like this to whip up in no time, it's a great fit. I used a template to kickstart a project with webpack and typescript and I was impressed with the quick reload time and the learning curve was very minimal, as I have quite a bit of experience in React.js and Angular.js.",
+          text:
+            "I created this project in March 2020 to familiarize myself with the Javascript framework Vue.js, when I decided to update my résumé. At first glance, I really like it. At least for a small project like this to whip up in no time, it's a great fit. I used a template to kickstart a project with webpack and typescript and I was impressed with the quick reload time and the learning curve was very minimal, as I have quite a bit of experience in React.js and Angular.js.",
           links: [
             {
               linkText: "atlisaevar.com",
-              url: "http://atlisaevar.com"
+              url: "http://atlisaevar.com",
             },
             {
               linkText: "GitHub repo",
-              url: "https://github.com/atlisg/my-cv"
+              url: "https://github.com/atlisg/my-cv",
             },
             {
               linkText: "Template used",
-              url: "https://github.com/ryutamaki/vue-template-webpack-typescript"
-            }
+              url:
+                "https://github.com/ryutamaki/vue-template-webpack-typescript",
+            },
           ],
         },
         {
           title: "VeganBot",
-          text: "VeganBot provides answers to frequently asked questions about veganism, as well as counter arguments for common justifications for animal abuse. The aim is to educate and train people in the vegan conversation, so that veganism can spread even faster. The idea for this project was born in the final year of my degree and I worked on it on and off after graduating and in May 2018 it was released. The client was built with TypeScript/Angular.js, the server with Node.js and then some Python scripts to gather the content.",
+          text:
+            "VeganBot provides answers to frequently asked questions about veganism, as well as counter arguments for common justifications for animal abuse. The aim is to educate and train people in the vegan conversation, so that veganism can spread even faster. The idea for this project was born in the final year of my degree and I worked on it on and off after graduating and in May 2018 it was released. The client was built with TypeScript/Angular.js, the server with Node.js and then some Python scripts to gather the content.",
           links: [
             {
               linkText: "veganbot.com",
-              url: "http://veganbot.com"
+              url: "http://veganbot.com",
             },
             {
               linkText: "GitHub repo",
-              url: "https://github.com/atlisg/vegan-bot"
-            }
-          ]
+              url: "https://github.com/atlisg/vegan-bot",
+            },
+          ],
         },
         {
           title: "Hvert fara peningarnir?",
@@ -56,16 +59,16 @@ export default Vue.extend({
           links: [
             {
               linkText: "hfp.kopavogur.is",
-              url: "https://hfp.kopavogur.is"
+              url: "https://hfp.kopavogur.is",
             },
             {
               linkText: "GitHub repo",
-              url: "https://github.com/agirmar92/HvertFaraPeningarnir"
-            }
+              url: "https://github.com/agirmar92/HvertFaraPeningarnir",
+            },
           ],
-        }
-      ]
+        },
+      ],
     };
-  }
+  },
 });
 </script>

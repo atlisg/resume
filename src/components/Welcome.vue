@@ -4,7 +4,11 @@
     <h1>{{ mainTitle }}</h1>
     <h3>{{ fullName }}</h3>
     <h4>{{ job }}</h4>
-    <continueButton v-bind:buttonText="beginText" v-bind:route="nextRoute" v-bind:animate="true" />
+    <continueButton
+      v-bind:buttonText="beginText"
+      v-bind:route="nextRoute"
+      v-bind:animate="true"
+    />
     <!-- <button class="pdf-btn">
       {{ pdfText }}
       <span class="download-icon" />
@@ -37,16 +41,16 @@ export default Vue.extend({
         {
           text:
             "“The true measure of any society can be found in how it treats its most vulnerable members”",
-          author: "― Mahatma Gandhi"
+          author: "― Mahatma Gandhi",
         },
         {
           text:
             "“Non-violence leads to the highest ethics, which is the goal of all evolution. Until we stop harming all other living beings, we are still savages.”",
-          author: "― Thomas A. Edison"
-        }
-      ]
+          author: "― Thomas A. Edison",
+        },
+      ],
     };
-  }
+  },
 });
 </script>
 
