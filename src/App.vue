@@ -14,13 +14,27 @@
           'menu-item': true,
           'menu-item-active': page.name === $route.name,
           'menu-item-first': page.name === 'Welcome',
-          'menu-item-last': page.name === 'Contact'
+          'menu-item-last': page.name === 'Extra',
         }"
         :to="page.route"
         >{{ page.name }}</router-link
       >
-      <div class="menu-nav menu-nav-back" v-bind:class="{'menu-nav-hidden': $route.name === 'Welcome' || $route.name === 'About'}" v-on:click="back()" />
-      <div class="menu-nav menu-nav-next" v-bind:class="{'menu-nav-hidden': $route.name === 'Welcome' || $route.name === 'Contact'}" v-on:click="next()" />
+      <div
+        class="menu-nav menu-nav-back"
+        v-bind:class="{
+          'menu-nav-hidden':
+            $route.name === 'Welcome' || $route.name === 'About',
+        }"
+        v-on:click="back()"
+      />
+      <div
+        class="menu-nav menu-nav-next"
+        v-bind:class="{
+          'menu-nav-hidden':
+            $route.name === 'Welcome' || $route.name === 'Contact',
+        }"
+        v-on:click="next()"
+      />
     </div>
     <router-view />
   </div>
@@ -39,34 +53,38 @@ export default Vue.extend({
       pages: [
         {
           name: "About",
-          route: "/about"
+          route: "/about",
         },
         {
           name: "Experience",
-          route: "/experience"
+          route: "/experience",
         },
         {
           name: "Skills",
-          route: "/skills"
+          route: "/skills",
         },
         {
           name: "Projects",
-          route: "/projects"
+          route: "/projects",
         },
         {
           name: "Education",
-          route: "/education"
+          route: "/education",
         },
         {
           name: "References",
-          route: "/references"
+          route: "/references",
         },
         {
           name: "Contact",
-          route: "/contact"
-        }
+          route: "/contact",
+        },
+        {
+          name: "Extra",
+          route: "/extra",
+        },
       ],
-      isScrolled: false
+      isScrolled: false,
     };
   },
   created() {
@@ -76,22 +94,26 @@ export default Vue.extend({
     window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
-    handleScroll: function() {
+    handleScroll: function () {
       this.isScrolled = window.scrollY > 50;
     },
-    next: function() {
-      const currentIndex = this.pages.indexOf(this.pages.find(page => page.name === this.$route.name));
+    next: function () {
+      const currentIndex = this.pages.indexOf(
+        this.pages.find((page) => page.name === this.$route.name)
+      );
       if (currentIndex + 1 === this.pages.length) return;
       const nextPage = this.pages[currentIndex + 1];
       this.$router.push(nextPage.route);
     },
-    back: function() {
-      const currentIndex = this.pages.indexOf(this.pages.find(page => page.name === this.$route.name));
+    back: function () {
+      const currentIndex = this.pages.indexOf(
+        this.pages.find((page) => page.name === this.$route.name)
+      );
       if (currentIndex === 0) return;
       const nextPage = this.pages[currentIndex - 1];
       this.$router.push(nextPage.route);
-    }
-  }
+    },
+  },
 });
 </script>
 
@@ -125,7 +147,7 @@ export default Vue.extend({
   transition: background-color 0.3s ease-in-out;
 }
 .menu-scrolled {
-  background-color: #CDDC39;
+  background-color: #cddc39;
   box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.25);
   transition: background-color 0.3s ease-in-out;
 }
@@ -174,24 +196,34 @@ export default Vue.extend({
 }
 
 @keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes fadeInBottom {
   from {
     opacity: 0;
     transform: translateY(100%);
   }
-  to { opacity: 1 }
+  to {
+    opacity: 1;
+  }
 }
 @keyframes wiggle {
   77% {
     transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
   }
-  80%, 86%, 92% {
+  80%,
+  86%,
+  92% {
     transform: scale(1.1) rotateZ(1deg);
   }
-  83%, 89%, 95% {
+  83%,
+  89%,
+  95% {
     transform: scale(1.1) rotateZ(-1deg);
   }
   98% {
