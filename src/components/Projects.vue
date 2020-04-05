@@ -28,7 +28,7 @@ export default Vue.extend({
             },
             {
               linkText: "GitHub repo",
-              url: "https://github.com/atlisg/my-cv",
+              url: "https://github.com/atlisg/resume",
             },
             {
               linkText: "Template used",

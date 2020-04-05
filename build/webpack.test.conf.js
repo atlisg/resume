@@ -1,10 +1,11 @@
-'use strict'
+"use strict";
 // This is the webpack config used for unit tests.
 
-const utils = require('./utils')
-const webpack = require('webpack')
-const merge = require('webpack-merge')
-const baseWebpackConfig = require('./webpack.base.conf')
+const path = require("path");
+const utils = require("./utils");
+const webpack = require("webpack");
+const merge = require("webpack-merge");
+const baseWebpackConfig = require("./webpack.base.conf");
 
 const webpackConfig = merge(baseWebpackConfig, {
   // use inline sourcemap for karma-sourcemap-loader
@@ -13,35 +14,34 @@ const webpackConfig = merge(baseWebpackConfig, {
       {
         test: /\.ts$/,
         enforce: "pre",
-        loader: 'istanbul-instrumenter-loader',
-        include: path.resolve('src/'),
+        loader: "istanbul-instrumenter-loader",
+        include: path.resolve("src/"),
         options: {
           compilerOptions: {
             sourceMap: false,
-            inlineSourceMap: true
-          }
-        }
+            inlineSourceMap: true,
+          },
+        },
       },
-      ...utils.styleLoaders()
-    ]
+      ...utils.styleLoaders(),
+    ],
   },
-  devtool: '#inline-source-map',
+  devtool: "#inline-source-map",
   resolveLoader: {
     alias: {
       // necessary to to make lang="scss" work in test when using vue-loader's ?inject option
       // see discussion at https://github.com/vuejs/vue-loader/issues/724
-      'scss-loader': 'sass-loader'
-    }
+      "scss-loader": "sass-loader",
+    },
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env': require('../config/test.env')
-    })
-  ]
-})
+      "process.env": require("../config/test.env"),
+    }),
+  ],
+});
 
 // no need for app entry during tests
-delete webpackConfig.entry
+delete webpackConfig.entry;
 
-module.exports = webpackConfig
-
+module.exports = webpackConfig;

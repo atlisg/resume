@@ -1,10 +1,10 @@
-# my-cv
+# resume
 
-> an online CV
+My online résumé built in Vue.js. Template used: [vue-template-webpack-typescript](https://github.com/ryutamaki/vue-template-webpack-typescript) (A full-featured Webpack + typescript + vue-loader setup with hot reload, linting, testing & css extraction)
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
