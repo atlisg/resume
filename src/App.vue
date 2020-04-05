@@ -22,16 +22,14 @@
       <div
         class="menu-nav menu-nav-back"
         v-bind:class="{
-          'menu-nav-hidden':
-            $route.name === 'Welcome' || $route.name === 'About',
+          'menu-nav-hidden': $route.name === 'Welcome' || $route.name === 'About',
         }"
         v-on:click="back()"
       />
       <div
         class="menu-nav menu-nav-next"
         v-bind:class="{
-          'menu-nav-hidden':
-            $route.name === 'Welcome' || $route.name === 'Contact',
+          'menu-nav-hidden': $route.name === 'Welcome' || $route.name === 'Contact',
         }"
         v-on:click="next()"
       />
@@ -41,57 +39,57 @@
 </template>
 
 <script>
-import Vue from "vue";
-import pageHeader from "./components/PageHeader";
-import textBody from "./components/TextBody";
-import continueButton from "./components/Continue";
+import Vue from 'vue';
+import pageHeader from './components/PageHeader';
+import textBody from './components/TextBody';
+import continueButton from './components/Continue';
 
 export default Vue.extend({
-  name: "app",
+  name: 'app',
   data() {
     return {
       pages: [
         {
-          name: "About",
-          route: "/about",
+          name: 'About',
+          route: '/about',
         },
         {
-          name: "Experience",
-          route: "/experience",
+          name: 'Experience',
+          route: '/experience',
         },
         {
-          name: "Skills",
-          route: "/skills",
+          name: 'Skills',
+          route: '/skills',
         },
         {
-          name: "Projects",
-          route: "/projects",
+          name: 'Projects',
+          route: '/projects',
         },
         {
-          name: "Education",
-          route: "/education",
+          name: 'Education',
+          route: '/education',
         },
         {
-          name: "References",
-          route: "/references",
+          name: 'References',
+          route: '/references',
         },
         {
-          name: "Contact",
-          route: "/contact",
+          name: 'Contact',
+          route: '/contact',
         },
         {
-          name: "Extra",
-          route: "/extra",
+          name: 'Extra',
+          route: '/extra',
         },
       ],
       isScrolled: false,
     };
   },
   created() {
-    window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll);
   },
   destroyed() {
-    window.removeEventListener("scroll", this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
     handleScroll: function () {
@@ -119,7 +117,7 @@ export default Vue.extend({
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -131,7 +129,7 @@ export default Vue.extend({
 }
 .bkgr {
   position: fixed;
-  background-image: url("./assets/tveir_i_sjotta.jpg");
+  background-image: url('./assets/tveir_i_sjotta.jpg');
   opacity: 0.3;
   height: 100%;
   width: 100%;
@@ -171,7 +169,7 @@ export default Vue.extend({
 .home {
   position: fixed;
   display: block;
-  background-image: url("./assets/house.svg");
+  background-image: url('./assets/house.svg');
   height: 40px;
   width: 40px;
   top: -15px;
@@ -183,7 +181,7 @@ export default Vue.extend({
   margin-right: 60px;
 }
 .menu-nav {
-  background: url("./assets/back.svg") no-repeat;
+  background: url('./assets/back.svg') no-repeat;
   width: 50%;
   height: 40px;
   margin: 0 10px;

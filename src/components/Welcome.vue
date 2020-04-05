@@ -4,11 +4,7 @@
     <h1>{{ mainTitle }}</h1>
     <h3>{{ fullName }}</h3>
     <h4>{{ job }}</h4>
-    <continueButton
-      v-bind:buttonText="beginText"
-      v-bind:route="nextRoute"
-      v-bind:animate="true"
-    />
+    <continueButton v-bind:buttonText="beginText" v-bind:route="nextRoute" v-bind:animate="true" />
     <!-- <button class="pdf-btn">
       {{ pdfText }}
       <span class="download-icon" />
@@ -23,30 +19,30 @@
 </template>
 
 <script>
-import Vue from "vue";
-import Download from "../assets/download.svg";
+import Vue from 'vue';
+import Download from '../assets/download.svg';
 
 export default Vue.extend({
-  name: "Welcome",
+  name: 'Welcome',
   data() {
     return {
-      subTitle: "Welcome to my",
-      mainTitle: "RÉSUMÉ",
-      fullName: "Atli Sævar Guðmundsson",
-      job: "Software Engineer",
-      pdfText: "Download PDF",
+      subTitle: 'Welcome to my',
+      mainTitle: 'RÉSUMÉ',
+      fullName: 'Atli Sævar Guðmundsson',
+      job: 'Software Engineer',
+      pdfText: 'Download PDF',
       beginText: "Let's see it",
-      nextRoute: "/about",
+      nextRoute: '/about',
       quotes: [
         {
           text:
-            "“The true measure of any society can be found in how it treats its most vulnerable members”",
-          author: "― Mahatma Gandhi",
+            '“The true measure of any society can be found in how it treats its most vulnerable members”',
+          author: '― Mahatma Gandhi',
         },
         {
           text:
-            "“Non-violence leads to the highest ethics, which is the goal of all evolution. Until we stop harming all other living beings, we are still savages.”",
-          author: "― Thomas A. Edison",
+            '“Non-violence leads to the highest ethics, which is the goal of all evolution. Until we stop harming all other living beings, we are still savages.”',
+          author: '― Thomas A. Edison',
         },
       ],
     };
@@ -88,16 +84,16 @@ h4 {
 .click-icon {
   display: inline-block;
   margin-left: 15px;
-  background-image: url("../assets/download.svg");
+  background-image: url('../assets/download.svg');
   height: 20px;
   width: 20px;
   opacity: 0.8;
 }
 .download-icon {
-  background-image: url("../assets/download.svg");
+  background-image: url('../assets/download.svg');
 }
 .click-icon {
-  background-image: url("../assets/click.svg");
+  background-image: url('../assets/click.svg');
   animation-name: wiggle;
   animation-duration: 5s;
   animation-iteration-count: infinite;
