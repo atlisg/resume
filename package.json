@@ -19,7 +19,7 @@
     "autoprefixer": "^7.1.2",
     "chai": "^4.1.2",
     "chalk": "^2.0.1",
-    "copy-webpack-plugin": "^5.1.1",
+    "copy-webpack-plugin": "^4.0.1",
     "cross-env": "^5.0.1",
     "css-loader": "^3.4.2",
     "diff": "^3.5.0",
