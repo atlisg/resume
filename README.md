@@ -24,4 +24,26 @@ npm run unit
 npm test
 ```
 
+## Deployment
+
+```bash
+# Log into Droplet
+ssh root@167.71.129.131
+
+# Find running process
+forever list
+
+# Stop server
+forever stop {pid}
+
+# After pulling repo, remove dist folder
+rm -rf dist
+
+# Build new dist
+npm run build
+
+# Start server
+forever start -c http-server ./dist -p 80
+```
+
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
