@@ -127,6 +127,9 @@ export default Vue.extend({
   width: 100%;
   z-index: 1;
 }
+.page-container {
+  padding-bottom: 50px;
+}
 .bkgr {
   position: fixed;
   background-image: url('./assets/tveir_i_sjotta.jpg');

@@ -1,5 +1,5 @@
 <template>
-  <div class="about-me">
+  <div class="page-container">
     <pageHeader v-bind:mainTitle="mainTitle" />
     <textBody v-bind:paragraphs="paragraphs" />
     <continueButton

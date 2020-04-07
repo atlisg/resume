@@ -1,5 +1,5 @@
 <template>
-  <div class="skills">
+  <div class="page-container">
     <pageHeader v-bind:mainTitle="mainTitle" />
     <textBody v-bind:paragraphs="paragraphs" />
     <continueButton v-bind:buttonText="buttonText" v-bind:route="nextRoute" v-bind:hoverUp="true" />
