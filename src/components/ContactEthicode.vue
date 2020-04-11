@@ -1,22 +1,25 @@
 <template>
   <div class="page-container">
-    <pageHeader v-bind:mainTitle="mainTitle" />
-    <textBody v-bind:paragraphs="paragraphs" />
+    <h2 class="main-title">{{ mainTitle }}</h2>
+    <frontPage v-bind:paragraphs="paragraphs" />
   </div>
 </template>
 
 <script>
 import Vue from 'vue';
 
-export default Vue.extend({
-  name: 'Contact',
+export default Vue.component('contactEthicode', {
   data() {
     return {
-      mainTitle: 'So many ways',
+      mainTitle: "Don't be shy",
       paragraphs: [
         {
           title: 'Email',
           email: 'atlisaevar@gmail.com',
+        },
+        {
+          title: 'Phone',
+          email: '+354 699 1647',
         },
         {
           title: 'GitHub',
@@ -24,10 +27,6 @@ export default Vue.extend({
             {
               linkText: 'github.com/atlisg',
               url: 'https://github.com/atlisg',
-            },
-            {
-              linkText: 'github.com/atlidohop',
-              url: 'https://github.com/atlidohop',
             },
           ],
         },
@@ -63,3 +62,22 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style scoped>
+.main-title {
+  padding-top: 200px;
+  margin: 0 100px;
+  font-size: 48px;
+  text-align: left;
+  line-height: 100px;
+  color: #9c27b0;
+  animation: fadeInBottom 1s;
+}
+
+@media screen and (min-width: 800px) {
+  .main-title {
+    font-size: 132px;
+    line-height: 120px;
+  }
+}
+</style>

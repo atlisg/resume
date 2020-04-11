@@ -19,7 +19,7 @@ export default Vue.extend({
     return {
       mainTitle: 'So much Atli',
       buttonText: 'Keep talking',
-      nextRoute: '/experience',
+      nextRoute: '/resume/experience',
       paragraphs: [
         {
           title: 'Passion',

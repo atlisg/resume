@@ -33,7 +33,7 @@ export default Vue.component('continueButton', {
 .continue-button {
   display: flex;
   justify-content: center;
-  margin: 30px auto 20px;
+  margin: 30px auto;
   width: max-content;
   background-color: white;
   border: 2px solid #2c3e50;

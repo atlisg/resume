@@ -4,6 +4,7 @@
       <p v-if="p.title" class="paragraph-title">{{ p.title }}</p>
       <p v-if="p.about" class="paragraph-about">{{ p.about }}</p>
       <p v-if="p.text" class="paragraph-text">{{ p.text }}</p>
+      <img v-if="p.image" :src="getImgUrl(p.image)" v-bind:alt="p.image" class="picture" />
       <a v-if="p.email" class="paragraph-link" :href="`mailto:${p.email}`">{{ p.email }}</a>
       <a
         v-for="link in p.links"
@@ -22,6 +23,11 @@ import Vue from 'vue';
 
 export default Vue.component('textBody', {
   props: ['paragraphs'],
+  methods: {
+    getImgUrl: function (pic) {
+      return require('../assets/' + pic);
+    },
+  },
 });
 </script>
 
@@ -60,6 +66,12 @@ export default Vue.component('textBody', {
   color: #3f51b5;
   animation: fadeInBottom 0.7s;
 }
+.picture {
+  height: 300px;
+  width: 300px;
+  padding: 0 20px;
+  animation: fadeInBottom 0.7s;
+}
 
 @media screen and (min-width: 800px) {
   .text-body {
@@ -76,6 +88,11 @@ export default Vue.component('textBody', {
   }
   .paragraph-link {
     display: inline;
+    padding: 0 40px;
+  }
+  .picture {
+    height: 500px;
+    width: 500px;
     padding: 0 40px;
   }
 }

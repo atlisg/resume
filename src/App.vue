@@ -1,20 +1,14 @@
 <template>
-  <div id="app">
-    <div class="bkgr" />
-    <router-link
-      v-bind:class="{ 'menu-item-active': $route.name === 'Welcome' }"
-      class="menu-item home"
-      to="/"
-    />
-    <div class="menu" v-bind:class="{ 'menu-scrolled': isScrolled }">
+  <div id="app" v-bind:class="{ frontground: !isResume() }">
+    <div v-if="isResume()" class="bkgr" />
+    <div v-if="isResume()" class="menu menu-resume" v-bind:class="{ 'menu-scrolled': isScrolled }">
       <router-link
         v-for="page in pages"
         v-bind:key="page.name"
         v-bind:class="{
           'menu-item': true,
-          'menu-item-active': page.name === $route.name,
-          'menu-item-first': page.name === 'Welcome',
-          'menu-item-last': page.name === 'Extra',
+          'menu-item-active': page.route === $route.path,
+          'menu-item-first': page.route === '/resume',
         }"
         :to="page.route"
         >{{ page.name }}</router-link
@@ -34,6 +28,28 @@
         v-on:click="next()"
       />
     </div>
+    <div
+      v-if="!isResume()"
+      class="menu menu-main"
+      v-bind:class="{
+        'menu-scrolled': isScrolled,
+        'menu-main-light': $route.path === '/work' || $route.path === '/contact',
+      }"
+    >
+      <router-link
+        v-for="page in mainPages"
+        v-bind:key="page.name"
+        v-bind:class="{
+          'menu-item': true,
+          'menu-item-main': true,
+          'menu-item-main-light': $route.path === '/work' || $route.path === '/contact',
+          'menu-item-active': page.route === $route.path,
+          'menu-item-first': page.route === '/',
+        }"
+        :to="page.route"
+        >{{ page.name }}</router-link
+      >
+    </div>
     <router-view />
   </div>
 </template>
@@ -42,6 +58,7 @@
 import Vue from 'vue';
 import pageHeader from './components/PageHeader';
 import textBody from './components/TextBody';
+import frontPage from './components/FrontPage';
 import continueButton from './components/Continue';
 
 export default Vue.extend({
@@ -50,36 +67,54 @@ export default Vue.extend({
     return {
       pages: [
         {
+          name: 'Resume',
+          route: '/resume',
+        },
+        {
+          name: 'About',
+          route: '/resume/about',
+        },
+        {
+          name: 'Experience',
+          route: '/resume/experience',
+        },
+        {
+          name: 'Skills',
+          route: '/resume/skills',
+        },
+        {
+          name: 'Projects',
+          route: '/resume/projects',
+        },
+        {
+          name: 'Education',
+          route: '/resume/education',
+        },
+        {
+          name: 'References',
+          route: '/resume/references',
+        },
+        {
+          name: 'Contact',
+          route: '/resume/contact',
+        },
+      ],
+      mainPages: [
+        {
+          name: 'Ethicode',
+          route: '/',
+        },
+        {
           name: 'About',
           route: '/about',
         },
         {
-          name: 'Experience',
-          route: '/experience',
-        },
-        {
-          name: 'Skills',
-          route: '/skills',
-        },
-        {
-          name: 'Projects',
-          route: '/projects',
-        },
-        {
-          name: 'Education',
-          route: '/education',
-        },
-        {
-          name: 'References',
-          route: '/references',
+          name: 'Work',
+          route: '/work',
         },
         {
           name: 'Contact',
           route: '/contact',
-        },
-        {
-          name: 'Extra',
-          route: '/extra',
         },
       ],
       isScrolled: false,
@@ -111,6 +146,10 @@ export default Vue.extend({
       const nextPage = this.pages[currentIndex - 1];
       this.$router.push(nextPage.route);
     },
+    isResume: function () {
+      const pathSplit = this.$route.path.split('/');
+      return pathSplit[1] === 'resume';
+    },
   },
 });
 </script>
@@ -123,12 +162,16 @@ export default Vue.extend({
   text-align: center;
   color: #2c3e50;
   margin: 0;
-  height: 100%;
+  height: max-content;
   width: 100%;
   z-index: 1;
 }
+.frontground {
+  background-color: #222;
+}
 .page-container {
   padding-bottom: 50px;
+  background-color: #eee;
 }
 .bkgr {
   position: fixed;
@@ -139,22 +182,25 @@ export default Vue.extend({
   z-index: -1;
 }
 .menu {
-  display: flex;
   position: fixed;
+  display: flex;
   align-items: center;
-  width: 100%;
-  height: 70px;
+  width: calc(100% - 40px);
+  padding: 30px;
   background-color: transparent;
   transition: background-color 0.3s ease-in-out;
 }
-.menu-scrolled {
-  background-color: #cddc39;
-  box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.25);
-  transition: background-color 0.3s ease-in-out;
+.menu-main {
+  background-color: #222;
+  color: #eee;
+}
+.menu-main-light {
+  background-color: #eee;
+  color: #222;
 }
 .menu-item {
   display: none;
-  margin: 30px 15px;
+  margin: 0 15px;
   font-size: 16px;
   font-weight: bold;
   color: #222;
@@ -164,6 +210,12 @@ export default Vue.extend({
   text-decoration: none;
   transition: color 0.2s ease-in-out;
 }
+.menu-item-main {
+  color: #eee;
+}
+.menu-item-main-light {
+  color: #222;
+}
 .menu-item:hover,
 .menu-item-active {
   color: #9c27b0;
@@ -172,7 +224,6 @@ export default Vue.extend({
 .home {
   position: fixed;
   display: block;
-  background-image: url('./assets/house.svg');
   height: 40px;
   width: 40px;
   top: -15px;
@@ -180,8 +231,8 @@ export default Vue.extend({
   z-index: 1;
   margin-left: -20px;
 }
-.menu-item-last {
-  margin-right: 60px;
+.menu-item-first {
+  margin-right: auto;
 }
 .menu-nav {
   background: url('./assets/back.svg') no-repeat;

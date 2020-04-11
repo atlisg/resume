@@ -15,7 +15,7 @@ export default Vue.extend({
     return {
       mainTitle: 'So many mentors',
       buttonText: 'Interesting',
-      nextRoute: '/contact',
+      nextRoute: '/resume/contact',
       paragraphs: [
         {
           title: 'Davíð Gunnarsson, Dohop CEO',

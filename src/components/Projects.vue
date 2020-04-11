@@ -19,16 +19,16 @@ export default Vue.extend({
     return {
       mainTitle: 'So personal',
       buttonText: 'Alright, alright',
-      nextRoute: '/education',
+      nextRoute: '/resume/education',
       paragraphs: [
         {
-          title: 'My online résumé',
+          title: 'Ethicode.org',
           text:
-            "I created this project in March 2020 to familiarize myself with the Javascript framework Vue.js, when I decided to update my résumé. At first glance, I really like it. At least for a small project like this to whip up in no time, it's a great fit. I used a template to kickstart a project with webpack and typescript and I was impressed with the quick reload time and the learning curve was very minimal, as I have quite a bit of experience in React.js and Angular.js.",
+            "I created this project in March 2020 to familiarize myself with the Javascript framework Vue.js, originally to create an online résumé but then morphed into a frontpage for Ethicode. At first glance, I really like it. At least for a small project like this to whip up in no time, it's a great fit. I used a template to kickstart a project with webpack and typescript and I was impressed with the quick reload time and the learning curve was very minimal, as I have quite a bit of experience in React.js and Angular.js.",
           links: [
             {
-              linkText: 'atlisaevar.com',
-              url: 'http://atlisaevar.com',
+              linkText: 'ethicode.org',
+              url: 'http://ethicode.org',
             },
             {
               linkText: 'GitHub repo',
@@ -41,7 +41,7 @@ export default Vue.extend({
           ],
         },
         {
-          title: 'VeganBot',
+          title: 'VeganBot.com',
           text:
             'VeganBot provides answers to frequently asked questions about veganism, as well as counter arguments for common justifications for animal abuse. The aim is to educate and train people in the vegan conversation, so that veganism can spread even faster. The idea for this project was born in the final year of my degree and I worked on it on and off after graduating and in May 2018 it was released. The client was built with TypeScript/Angular.js, the server with Node.js and then some Python scripts to gather the content.',
           links: [

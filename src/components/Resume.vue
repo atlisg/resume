@@ -5,16 +5,6 @@
     <h3>{{ fullName }}</h3>
     <h4>{{ job }}</h4>
     <continueButton v-bind:buttonText="beginText" v-bind:route="nextRoute" v-bind:animate="true" />
-    <!-- <button class="pdf-btn">
-      {{ pdfText }}
-      <span class="download-icon" />
-    </button>-->
-    <div class="quotes">
-      <div v-for="quote in quotes" v-bind:key="quote.author" class="quote">
-        <p class="text">{{ quote.text }}</p>
-        <p class="cite">{{ quote.author }}</p>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -23,7 +13,7 @@ import Vue from 'vue';
 import Download from '../assets/download.svg';
 
 export default Vue.extend({
-  name: 'Welcome',
+  name: 'Resume',
   data() {
     return {
       subTitle: 'Welcome to my',
@@ -32,25 +22,13 @@ export default Vue.extend({
       job: 'Software Engineer',
       pdfText: 'Download PDF',
       beginText: "Let's see it",
-      nextRoute: '/about',
-      quotes: [
-        {
-          text:
-            '“The true measure of any society can be found in how it treats its most vulnerable members”',
-          author: '― Mahatma Gandhi',
-        },
-        {
-          text:
-            '“Non-violence leads to the highest ethics, which is the goal of all evolution. Until we stop harming all other living beings, we are still savages.”',
-          author: '― Thomas A. Edison',
-        },
-      ],
+      nextRoute: '/resume/about',
     };
   },
 });
 </script>
 
-<style>
+<style scoped>
 h1 {
   margin: 0;
   font-size: 72px;
@@ -99,21 +77,6 @@ h4 {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-delay: 0s;
-}
-.quotes {
-  padding: 30px;
-  background-color: #673ab7;
-  color: white;
-  animation: fadeInBottom 1.5s;
-}
-.text {
-  max-width: 750px;
-  margin: 0 auto;
-  font-size: 21px;
-  font-style: italic;
-}
-.cite {
-  font-size: 21px;
 }
 
 @media screen and (min-width: 800px) {

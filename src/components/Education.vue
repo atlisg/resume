@@ -19,7 +19,7 @@ export default Vue.extend({
     return {
       mainTitle: 'So many lessons',
       buttonText: 'Yes, yes',
-      nextRoute: '/references',
+      nextRoute: '/resume/references',
       paragraphs: [
         {
           title: 'Reykjavík University, Aug 2013 - May 2016',

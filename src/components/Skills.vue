@@ -15,7 +15,7 @@ export default Vue.extend({
     return {
       mainTitle: 'So much skill',
       buttonText: 'Go on',
-      nextRoute: '/projects',
+      nextRoute: '/resume/projects',
       paragraphs: [
         {
           title: 'Frontend',
