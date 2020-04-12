@@ -1,9 +1,9 @@
 <template>
   <div class="ethicode">
     <div class="vision">
-      <h2 class="passion">{{ passion }}</h2>
-      <h3 class="noble">{{ noble }}</h3>
-      <h4 class="converted">{{ convert }}</h4>
+      <h2 v-animate="'slide-up'" class="passion">{{ passion }}</h2>
+      <h3 v-animate="'slide-up'" class="noble">{{ noble }}</h3>
+      <h4 v-animate="'slide-up'" class="converted">{{ convert }}</h4>
     </div>
     <work />
     <aboutEthicode />
@@ -23,39 +23,58 @@ export default Vue.extend({
     return {
       passion: 'For a world',
       noble: 'of non-violence',
-      convert: 'towards all sentient animals.',
+      convert: 'for all sentient animals.',
     };
   },
 });
 </script>
 
 <style scoped>
+.ethicode {
+}
 .vision {
   height: 100vh;
+  padding: 0 20px;
 }
 .passion {
-  padding-top: 350px;
+  padding-top: 33vh;
 }
 .passion,
 .noble {
-  margin: 0 100px;
+  max-width: 1200px;
+  margin: 0 auto;
   font-size: 48px;
   text-align: left;
-  line-height: 100px;
+  line-height: 48px;
   color: #e91e63;
   animation: fadeInBottom 1s;
 }
 .converted {
-  padding-top: 20px;
-  margin: 0 100px;
+  max-width: 1200px;
+  padding-top: 5px;
+  margin: 0 auto;
   color: #673ab7;
-  font-size: 24px;
+  font-size: 18px;
   text-align: left;
-  line-height: 30px;
+  line-height: 24px;
   animation: fadeInBottom 1.5s;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
+  .vision {
+    padding: 0 45px;
+  }
+  .passion,
+  .noble {
+    font-size: 72px;
+    line-height: 72px;
+  }
+  .converted {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+@media screen and (min-width: 1000px) {
   .passion,
   .noble {
     font-size: 132px;
@@ -63,7 +82,7 @@ export default Vue.extend({
   }
   .converted {
     font-size: 48px;
-    line-height: 20px;
+    padding-top: 20px;
   }
 }
 </style>

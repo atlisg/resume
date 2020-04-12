@@ -16,14 +16,14 @@
       <div
         class="menu-nav menu-nav-back"
         v-bind:class="{
-          'menu-nav-hidden': $route.name === 'Welcome' || $route.name === 'About',
+          'menu-nav-hidden': $route.path === '/',
         }"
         v-on:click="back()"
       />
       <div
         class="menu-nav menu-nav-next"
         v-bind:class="{
-          'menu-nav-hidden': $route.name === 'Welcome' || $route.name === 'Contact',
+          'menu-nav-hidden': $route.path === '/' || $route.path === '/resume/contact',
         }"
         v-on:click="next()"
       />
@@ -56,10 +56,13 @@
 
 <script>
 import Vue from 'vue';
+import VueAnimate from 'vue-animate-scroll';
 import pageHeader from './components/PageHeader';
 import textBody from './components/TextBody';
 import frontPage from './components/FrontPage';
 import continueButton from './components/Continue';
+
+Vue.use(VueAnimate);
 
 export default Vue.extend({
   name: 'app',
@@ -170,8 +173,11 @@ export default Vue.extend({
   background-color: #222;
 }
 .page-container {
-  padding-bottom: 50px;
+  padding: 0 20px 50px;
   background-color: #eee;
+}
+.page-container-dark {
+  background-color: #222;
 }
 .bkgr {
   position: fixed;
@@ -186,11 +192,14 @@ export default Vue.extend({
   display: flex;
   align-items: center;
   width: calc(100% - 40px);
-  padding: 30px;
-  background-color: transparent;
+  padding: 20px;
+  background-color: #cddc39;
   transition: background-color 0.3s ease-in-out;
+  z-index: 2;
 }
 .menu-main {
+  width: calc(100% - 10px);
+  padding: 20px 5px;
   background-color: #222;
   color: #eee;
 }
@@ -209,8 +218,10 @@ export default Vue.extend({
   padding: 0;
   text-decoration: none;
   transition: color 0.2s ease-in-out;
+  transform: translateY(0);
 }
 .menu-item-main {
+  display: block;
   color: #eee;
 }
 .menu-item-main-light {
@@ -246,6 +257,19 @@ export default Vue.extend({
 .menu-nav-hidden {
   opacity: 0;
 }
+.animate {
+  transition-delay: 0.1s;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+}
+.slide-up {
+  transform: translateY(100px);
+  opacity: 0;
+}
+.slide-up.animate-active {
+  transform: translateY(0);
+  opacity: 1;
+}
 
 @keyframes fadein {
   from {
@@ -255,6 +279,7 @@ export default Vue.extend({
     opacity: 1;
   }
 }
+
 @keyframes fadeInBottom {
   from {
     opacity: 0;
@@ -264,6 +289,7 @@ export default Vue.extend({
     opacity: 1;
   }
 }
+
 @keyframes wiggle {
   77% {
     transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
@@ -283,9 +309,26 @@ export default Vue.extend({
   }
 }
 
+@media screen and (min-width: 600px) {
+  .menu-main {
+    width: calc(100% - 60px);
+    padding: 30px;
+  }
+}
+
 @media screen and (min-width: 800px) {
+  .page-container {
+    padding: 0 45px 50px;
+    background-color: #eee;
+  }
+  .page-container-dark {
+    background-color: #222;
+  }
   .menu {
     justify-content: flex-end;
+  }
+  .menu-main {
+    display: flex;
   }
   .menu-item {
     display: block;
@@ -297,6 +340,7 @@ export default Vue.extend({
     display: none;
   }
 }
+
 @media screen and (min-width: 1000px) {
   .menu-item {
     font-size: 21px;

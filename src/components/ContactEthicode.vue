@@ -1,7 +1,7 @@
 <template>
   <div class="page-container">
-    <h2 class="main-title">{{ mainTitle }}</h2>
-    <frontPage v-bind:paragraphs="paragraphs" />
+    <h2 v-animate="'slide-up'" class="main-title">{{ mainTitle }}</h2>
+    <frontPage v-bind:paragraphs="paragraphs" v-bind:isContact="true" />
   </div>
 </template>
 
@@ -11,18 +11,14 @@ import Vue from 'vue';
 export default Vue.component('contactEthicode', {
   data() {
     return {
-      mainTitle: "Don't be shy",
+      mainTitle: 'Get in touch',
       paragraphs: [
         {
-          title: 'Email',
+          text: 'Email: ',
           email: 'atlisaevar@gmail.com',
         },
         {
-          title: 'Phone',
-          email: '+354 699 1647',
-        },
-        {
-          title: 'GitHub',
+          text: 'GitHub: ',
           links: [
             {
               linkText: 'github.com/atlisg',
@@ -31,7 +27,7 @@ export default Vue.component('contactEthicode', {
           ],
         },
         {
-          title: 'LinkedIn',
+          text: 'LinkedIn: ',
           links: [
             {
               linkText: 'linkedin.com/in/atlisaevar',
@@ -40,7 +36,7 @@ export default Vue.component('contactEthicode', {
           ],
         },
         {
-          title: 'Instagram',
+          text: 'Instagram: ',
           links: [
             {
               linkText: 'instagram.com/atlisaevar',
@@ -49,7 +45,7 @@ export default Vue.component('contactEthicode', {
           ],
         },
         {
-          title: 'Facebook',
+          text: 'Facebook: ',
           links: [
             {
               linkText: 'facebook.com/atlisaevar',
@@ -65,18 +61,34 @@ export default Vue.component('contactEthicode', {
 
 <style scoped>
 .main-title {
-  padding-top: 200px;
-  margin: 0 100px;
-  font-size: 48px;
+  max-width: 1200px;
+  padding-top: 100px;
+  margin: 0 auto;
+  font-size: 36px;
   text-align: left;
-  line-height: 100px;
+  line-height: 50px;
   color: #9c27b0;
   animation: fadeInBottom 1s;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
   .main-title {
-    font-size: 132px;
+    padding-top: 160px;
+    font-size: 48px;
+    line-height: 100px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .main-title {
+    font-size: 72px;
+    line-height: 120px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-title {
+    font-size: 104px;
     line-height: 120px;
   }
 }

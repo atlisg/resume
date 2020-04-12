@@ -1,6 +1,6 @@
 <template>
   <div class="page-container">
-    <h2 class="main-title">{{ mainTitle }}</h2>
+    <h2 v-animate="'slide-up'" class="main-title">{{ mainTitle }}</h2>
     <frontPage v-bind:paragraphs="paragraphs" />
   </div>
 </template>
@@ -11,10 +11,10 @@ import Vue from 'vue';
 export default Vue.component('work', {
   data() {
     return {
-      mainTitle: 'Up and running',
+      mainTitle: 'Featured',
       paragraphs: [
         {
-          title: 'Ethicode.org (this website)',
+          title: 'Ethicode.org',
           smallText:
             'This website was whipped up in March 2020, originally to create an online résumé but then morphed into a frontpage for Ethicode. The page was built with Vue.js, Webpack and TypeScript.',
           links: [
@@ -28,7 +28,7 @@ export default Vue.component('work', {
             },
           ],
           image: {
-            img: 'ethicode.png',
+            img: 'ethicodepic.png',
             name: 'ethicode',
           },
         },
@@ -47,27 +47,8 @@ export default Vue.component('work', {
             },
           ],
           image: {
-            img: 'veganbotscreen.png',
+            img: 'veganbotpic.png',
             name: 'veganbot',
-          },
-        },
-        {
-          title: 'Hvert fara peningarnir?',
-          smallText:
-            "'Hvert fara peningarnir?' or 'Where does the money go?' is a website displaying the books for the town of Kópavogur in a user friendly way to increase transparency on how the town's finance is managed. The town of Kópavogur was the first establishment in Iceland to open their books in this way but now many other towns and counties have followed suit. The client was built using Angular.js, the server with Node.js and a Python script was used to move the data from the towns SQL database into a super fast NoSQL ElasticSearch search engine.",
-          links: [
-            {
-              linkText: 'hfp.kopavogur.is',
-              url: 'https://hfp.kopavogur.is',
-            },
-            {
-              linkText: 'GitHub repo',
-              url: 'https://github.com/agirmar92/HvertFaraPeningarnir',
-            },
-          ],
-          image: {
-            img: 'hfpscreen.png',
-            name: 'hfp',
           },
         },
       ],
@@ -78,18 +59,34 @@ export default Vue.component('work', {
 
 <style scoped>
 .main-title {
-  padding-top: 200px;
-  margin: 0 100px;
-  font-size: 48px;
+  max-width: 1200px;
+  padding-top: 100px;
+  margin: 0 auto;
+  font-size: 36px;
   text-align: left;
-  line-height: 100px;
+  line-height: 50px;
   color: #9c27b0;
   animation: fadeInBottom 1s;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
   .main-title {
-    font-size: 132px;
+    padding-top: 160px;
+    font-size: 48px;
+    line-height: 100px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .main-title {
+    font-size: 72px;
+    line-height: 120px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .main-title {
+    font-size: 104px;
     line-height: 120px;
   }
 }

@@ -24,12 +24,12 @@ export default Vue.extend({
         {
           title: 'Passion',
           text:
-            "My passion, my purpose, my 'why', is to improve life on this planet. I want to reduce suffering for sentient animals, human and non-human. I want to improve our treatment of Earth, our only home. I want to explore and experiment to figure out new ways to improve our collective impact on the world and our connection to the universe. I want to improve the way we organize in groups, in order to achieve these goals. I want to improve mankind.",
+            "My passion, my 'why', is to reduce suffering for sentient animals, human and non-human and to improve our treatment of Earth, our only home.",
         },
         {
           title: 'Coding',
           text:
-            "I fell in love with Software Engineering in 2013 but I want to be clear that this is not my passion. I thought it was for a few years but I now realize that it's just a powerful tool to help me work on my real passions, stated above. I only happen to have some natural talents for it and the capacity to super focus for long time periods. However, I do enjoy it immensely, I love to solve challenging problems and design beautiful software. Because of my OCD tendencies, my code is usually very tidy and clean, and because of my desire to continuously improve myself my code is usually very current and built with state of the art technologies.",
+            "My mind was blown in 2013 when I started studying Computer Science. It's such a powerful tool that can be used for virtually anything. I was fortunate to have some natural talents there and enjoyed my studies a lot, and still do. My code is usually tidy and clean, and built using state of the art technologies.",
         },
         {
           title: 'Family',
