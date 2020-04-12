@@ -1,6 +1,6 @@
 # resume
 
-My online résumé built in Vue.js. Template used: [vue-template-webpack-typescript](https://github.com/ryutamaki/vue-template-webpack-typescript) (A full-featured Webpack + typescript + vue-loader setup with hot reload, linting, testing & css extraction)
+This website was whipped up in March 2020, originally to create an online résumé but then morphed into a frontpage for Ethicode. The page was built with Vue.js, Webpack and TypeScript. Template used: [vue-template-webpack-typescript](https://github.com/ryutamaki/vue-template-webpack-typescript) (A full-featured Webpack + typescript + vue-loader setup with hot reload, linting, testing & css extraction)
 
 ## Build Setup
 

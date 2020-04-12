@@ -15,23 +15,14 @@ export default Vue.component('contactEthicode', {
       paragraphs: [
         {
           text: 'Email: ',
-          email: 'atlisaevar@gmail.com',
-        },
-        {
-          text: 'GitHub: ',
-          links: [
-            {
-              linkText: 'github.com/atlisg',
-              url: 'https://github.com/atlisg',
-            },
-          ],
+          email: 'ethicode@ethicode.org',
         },
         {
           text: 'LinkedIn: ',
           links: [
             {
-              linkText: 'linkedin.com/in/atlisaevar',
-              url: 'https://www.linkedin.com/in/atlisaevar/',
+              linkText: 'linkedin.com/in/ethicodeorg',
+              url: 'https://www.linkedin.com/in/ethicodeorg/',
             },
           ],
         },
@@ -39,8 +30,8 @@ export default Vue.component('contactEthicode', {
           text: 'Instagram: ',
           links: [
             {
-              linkText: 'instagram.com/atlisaevar',
-              url: 'https://www.instagram.com/atlisaevar/',
+              linkText: 'instagram.com/ethicodeorg',
+              url: 'https://www.instagram.com/ethicodeorg/',
             },
           ],
         },
@@ -48,8 +39,8 @@ export default Vue.component('contactEthicode', {
           text: 'Facebook: ',
           links: [
             {
-              linkText: 'facebook.com/atlisaevar',
-              url: 'https://www.facebook.com/atlisaevar',
+              linkText: 'facebook.com/ethicodeorg',
+              url: 'https://www.facebook.com/ethicodeorg',
             },
           ],
         },
