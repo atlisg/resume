@@ -25,6 +25,11 @@ export default Vue.extend({
       nextRoute: '/resume/about',
     };
   },
+  methods: {
+    track() {
+      this.$ga.page('/resume');
+    },
+  },
 });
 </script>
 

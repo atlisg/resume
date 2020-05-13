@@ -57,12 +57,16 @@
 <script>
 import Vue from 'vue';
 import VueAnimate from 'vue-animate-scroll';
+import VueAnalytics from 'vue-analytics';
 import pageHeader from './components/PageHeader';
 import textBody from './components/TextBody';
 import frontPage from './components/FrontPage';
 import continueButton from './components/Continue';
 
 Vue.use(VueAnimate);
+Vue.use(VueAnalytics, {
+  id: 'UA-113130296-2',
+});
 
 export default Vue.extend({
   name: 'app',
@@ -130,10 +134,10 @@ export default Vue.extend({
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
-    handleScroll: function () {
+    handleScroll: function() {
       this.isScrolled = window.scrollY > 50;
     },
-    next: function () {
+    next: function() {
       const currentIndex = this.pages.indexOf(
         this.pages.find((page) => page.name === this.$route.name)
       );
@@ -141,7 +145,7 @@ export default Vue.extend({
       const nextPage = this.pages[currentIndex + 1];
       this.$router.push(nextPage.route);
     },
-    back: function () {
+    back: function() {
       const currentIndex = this.pages.indexOf(
         this.pages.find((page) => page.name === this.$route.name)
       );
@@ -149,7 +153,7 @@ export default Vue.extend({
       const nextPage = this.pages[currentIndex - 1];
       this.$router.push(nextPage.route);
     },
-    isResume: function () {
+    isResume: function() {
       const pathSplit = this.$route.path.split('/');
       return pathSplit[1] === 'resume';
     },

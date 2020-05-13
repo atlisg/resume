@@ -18,15 +18,6 @@ export default Vue.component('contactEthicode', {
           email: 'ethicode@ethicode.org',
         },
         {
-          text: 'LinkedIn: ',
-          links: [
-            {
-              linkText: 'linkedin.com/in/ethicodeorg',
-              url: 'https://www.linkedin.com/in/ethicodeorg/',
-            },
-          ],
-        },
-        {
           text: 'Instagram: ',
           links: [
             {
@@ -35,17 +26,13 @@ export default Vue.component('contactEthicode', {
             },
           ],
         },
-        {
-          text: 'Facebook: ',
-          links: [
-            {
-              linkText: 'facebook.com/ethicodeorg',
-              url: 'https://www.facebook.com/ethicodeorg',
-            },
-          ],
-        },
       ],
     };
+  },
+  methods: {
+    track() {
+      this.$ga.page('/contact');
+    },
   },
 });
 </script>

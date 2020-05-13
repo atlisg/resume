@@ -14,9 +14,28 @@ export default Vue.component('work', {
       mainTitle: 'Featured',
       paragraphs: [
         {
+          title: 'FoodprintCalculator.com',
+          smallText:
+            'Released in May 2020, the Foodprint Calculator determines the environmental impact of a single meal, given a list of its ingredients and their weight. Build with Next.js',
+          links: [
+            {
+              linkText: 'foodprintcalculator.com',
+              url: 'https://foodprintcalculator.com/',
+            },
+            {
+              linkText: 'GitHub repo',
+              url: 'https://github.com/atlisg/foodprint-calculator',
+            },
+          ],
+          image: {
+            img: 'foodprintcalculatorpic.png',
+            name: 'foodprintcalculator',
+          },
+        },
+        {
           title: 'Ethicode.org',
           smallText:
-            'This website was whipped up in March 2020, originally to create an online résumé but then morphed into a frontpage for Ethicode. The page was built with Vue.js, Webpack and TypeScript.',
+            'The Ethicode homepage (this website) was released in March 2020. Built with Vue.js.',
           links: [
             {
               linkText: 'ethicode.org',
@@ -53,6 +72,11 @@ export default Vue.component('work', {
         },
       ],
     };
+  },
+  methods: {
+    track() {
+      this.$ga.page('/work');
+    },
   },
 });
 </script>

@@ -30,15 +30,15 @@ export default Vue.component('aboutEthicode', {
             img: 'tveir_i_sjotta.jpg',
             name: 'atli',
           },
-          links: [
-            {
-              linkText: 'My résumé',
-              url: 'http://ethicode.org/#/resume',
-            },
-          ],
+          about: 'Atli Sævar Guðmundsson, CEO and founder',
         },
       ],
     };
+  },
+  methods: {
+    track() {
+      this.$ga.page('/about');
+    },
   },
 });
 </script>

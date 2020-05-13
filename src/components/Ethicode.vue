@@ -22,9 +22,14 @@ export default Vue.extend({
   data() {
     return {
       passion: 'For a world',
-      noble: 'of non-violence',
-      convert: 'for all sentient animals.',
+      noble: 'of mankind',
+      convert: 'being kind to every kind.',
     };
+  },
+  methods: {
+    track() {
+      this.$ga.page('/');
+    },
   },
 });
 </script>

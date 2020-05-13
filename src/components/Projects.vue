@@ -22,6 +22,21 @@ export default Vue.extend({
       nextRoute: '/resume/education',
       paragraphs: [
         {
+          title: 'FoodprintCalculator.com',
+          text:
+            'Released in May 2020, the Foodprint Calculator determines the environmental impact of a single meal, given a list of its ingredients and their weight. Build with Next.js',
+          links: [
+            {
+              linkText: 'foodprintcalculator.com',
+              url: 'https://foodprintcalculator.com/',
+            },
+            {
+              linkText: 'GitHub repo',
+              url: 'https://github.com/atlisg/foodprint-calculator',
+            },
+          ],
+        },
+        {
           title: 'Ethicode.org',
           text:
             "I created this project in March 2020 to familiarize myself with the Javascript framework Vue.js, originally to create an online résumé but then morphed into a frontpage for Ethicode. At first glance, I really like it. At least for a small project like this to whip up in no time, it's a great fit. I used a template to kickstart a project with webpack and typescript and I was impressed with the quick reload time and the learning curve was very minimal, as I have quite a bit of experience in React.js and Angular.js.",
