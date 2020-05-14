@@ -16,7 +16,7 @@ export default Vue.component('work', {
         {
           title: 'FoodprintCalculator.com',
           smallText:
-            'Released in May 2020, the Foodprint Calculator determines the environmental impact of a single meal, given a list of its ingredients and their weight. Build with Next.js',
+            'Released in May 2020, the Foodprint Calculator determines the environmental impact of a single meal, given a list of its ingredients and their weight. Built with Next.js.',
           links: [
             {
               linkText: 'foodprintcalculator.com',
