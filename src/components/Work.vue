@@ -14,7 +14,7 @@ export default Vue.component('work', {
       mainTitle: 'Featured',
       paragraphs: [
         {
-          title: 'FoodprintCalculator.com',
+          title: 'Foodprint Calculator',
           smallText:
             'Released in May 2020, the Foodprint Calculator determines the environmental impact of a single meal, given a list of its ingredients and their weight. Built with Next.js.',
           links: [
@@ -52,7 +52,7 @@ export default Vue.component('work', {
           },
         },
         {
-          title: 'VeganBot.com',
+          title: 'VeganBot',
           smallText:
             'VeganBot provides answers to frequently asked questions about veganism, as well as counter arguments for common justifications for animal abuse. The aim is to educate and train people in the vegan conversation, so that veganism can spread even faster. Released in May 2018, the client was built with TypeScript/Angular.js, the server with Node.js and then some Python scripts to gather the content.',
           links: [

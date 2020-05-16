@@ -38,9 +38,9 @@
       <p v-if="p.smallText" v-animate="'slide-up'" class="paragraph-small-text">
         {{ p.smallText }}
       </p>
-      <a v-if="p.email" v-animate="'slide-up'" class="paragraph-link" :href="`mailto:${p.email}`">{{
-        p.email
-      }}</a>
+      <a v-if="p.email" v-animate="'slide-up'" class="paragraph-link" :href="`mailto:${p.email}`">
+        {{ p.email }}
+      </a>
       <a
         v-for="link in p.links"
         v-animate="'slide-up'"
@@ -60,7 +60,7 @@ import Vue from 'vue';
 export default Vue.component('frontPage', {
   props: ['paragraphs', 'isContact'],
   methods: {
-    getImgUrl: function (pic) {
+    getImgUrl: function(pic) {
       return require('../assets/' + pic);
     },
   },
@@ -135,7 +135,7 @@ export default Vue.component('frontPage', {
 .paragraph-link {
   display: block;
   padding: 10px 0;
-  margin-right: 50px;
+  margin-right: 40px;
   text-decoration: none;
   color: #3f51b5;
   font-size: 21px;

@@ -21,9 +21,9 @@ export default Vue.extend({
   name: 'Ethicode',
   data() {
     return {
-      passion: 'For a world',
-      noble: 'of mankind',
-      convert: 'being kind to every kind.',
+      passion: 'Be kind',
+      noble: 'to every kind',
+      convert: 'for a higher code of ethics.',
     };
   },
   methods: {
@@ -87,7 +87,7 @@ export default Vue.extend({
   }
   .converted {
     font-size: 48px;
-    padding-top: 20px;
+    padding-top: 25px;
   }
 }
 </style>
