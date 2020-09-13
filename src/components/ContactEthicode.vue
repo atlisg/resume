@@ -14,6 +14,14 @@ export default Vue.component('contactEthicode', {
       mainTitle: 'Get in touch',
       paragraphs: [
         {
+          text:
+            'Now is the time to build something new. Drop us a line if you have a brilliant idea that needs to be implemented and shared with the world.',
+        },
+        {
+          text:
+            'If you want to join Ethicode or contribute in any way, we are always looking for purposeful people to collaborate with. Feel free to send in your resume. Skills and experience are important but Ethicode is most interested in your passions. What makes you tick? What inspires you?',
+        },
+        {
           text: 'Email: ',
           email: 'ethicode@ethicode.org',
         },

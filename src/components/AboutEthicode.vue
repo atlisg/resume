@@ -16,12 +16,12 @@ export default Vue.component('aboutEthicode', {
         {
           title: 'Why',
           text:
-            "Ethicode's mission is to end suffering and exploitation of all living souls by accelerating the world's transition to a plant-based diet.",
+            "All animals are created equal. Ethicode's mission is to inspire equity for them all.",
         },
         {
           title: 'How',
           text:
-            'By creating intuitive user experiences in elegant software that makes this transformation easier and more appealing to the public.',
+            'By innovating and building software to educate, raise awareness, and promote fairness towards all animal species.',
         },
         {
           title: 'Who',
@@ -30,7 +30,15 @@ export default Vue.component('aboutEthicode', {
             img: 'tveir_i_sjotta.jpg',
             name: 'atli',
           },
-          about: 'Atli Sævar Guðmundsson, CEO and founder',
+          about: 'Atli Sævar, CVO and founder',
+        },
+        {
+          title: 'What now',
+          text: '..but Ethicode is looking to expand!',
+          route: {
+            text: 'Get in touch',
+            route: '/contact',
+          },
         },
       ],
     };

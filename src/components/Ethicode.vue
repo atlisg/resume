@@ -21,9 +21,9 @@ export default Vue.extend({
   name: 'Ethicode',
   data() {
     return {
-      passion: 'Be kind',
-      noble: 'to every kind',
-      convert: 'for a higher code of ethics.',
+      passion: 'For a world',
+      noble: 'where all sentient animals',
+      convert: 'have the right to life, liberty and the pursuit of happiness.',
     };
   },
   methods: {
@@ -35,8 +35,6 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-.ethicode {
-}
 .vision {
   height: 100vh;
   padding: 0 20px;
@@ -54,40 +52,67 @@ export default Vue.extend({
   color: #e91e63;
   animation: fadeInBottom 1s;
 }
+.noble {
+  color: #673ab7;
+  font-size: 32px;
+  line-height: 32px;
+}
 .converted {
   max-width: 1200px;
   padding-top: 5px;
   margin: 0 auto;
-  color: #673ab7;
+  color: #eee;
   font-size: 18px;
   text-align: left;
   line-height: 24px;
   animation: fadeInBottom 1.5s;
 }
 
-@media screen and (min-width: 600px) {
-  .vision {
-    padding: 0 45px;
-  }
-  .passion,
-  .noble {
+@media screen and (min-width: 450px) {
+  .passion {
     font-size: 72px;
-    line-height: 72px;
+    line-height: 60px;
+  }
+  .noble {
+    font-size: 48px;
+    line-height: 48px;
   }
   .converted {
     font-size: 24px;
-    line-height: 30px;
+    line-height: 28px;
   }
 }
-@media screen and (min-width: 1000px) {
-  .passion,
+
+@media screen and (min-width: 800px) {
+  .vision {
+    padding: 0 45px;
+  }
+  .passion {
+    font-size: 112px;
+    line-height: 104px;
+  }
   .noble {
-    font-size: 132px;
-    line-height: 120px;
+    font-size: 56px;
+    line-height: 56px;
   }
   .converted {
-    font-size: 48px;
-    padding-top: 25px;
+    font-size: 30px;
+    line-height: 34px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .passion {
+    font-size: 182px;
+    line-height: 156px;
+  }
+  .noble {
+    font-size: 96px;
+    line-height: 96px;
+  }
+  .converted {
+    font-size: 44px;
+    line-height: 48px;
+    padding-top: 10px;
   }
 }
 </style>

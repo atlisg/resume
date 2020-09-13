@@ -108,7 +108,7 @@ export default Vue.extend({
       ],
       mainPages: [
         {
-          name: 'Ethicode',
+          name: '<Ethicode/>',
           route: '/',
         },
         {
@@ -139,7 +139,7 @@ export default Vue.extend({
     },
     next: function() {
       const currentIndex = this.pages.indexOf(
-        this.pages.find((page) => page.name === this.$route.name)
+        this.pages.find(page => page.name === this.$route.name),
       );
       if (currentIndex + 1 === this.pages.length) return;
       const nextPage = this.pages[currentIndex + 1];
@@ -147,7 +147,7 @@ export default Vue.extend({
     },
     back: function() {
       const currentIndex = this.pages.indexOf(
-        this.pages.find((page) => page.name === this.$route.name)
+        this.pages.find(page => page.name === this.$route.name),
       );
       if (currentIndex === 0) return;
       const nextPage = this.pages[currentIndex - 1];

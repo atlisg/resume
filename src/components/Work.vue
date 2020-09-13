@@ -16,19 +16,15 @@ export default Vue.component('work', {
         {
           title: 'Foodprint Calculator',
           smallText:
-            'Released in May 2020, the Foodprint Calculator determines the environmental impact of a single meal, given a list of its ingredients and their weight. Built with Next.js.',
+            'Released in May 2020, the Foodprint Calculator determines the environmental impact of a single meal, given a list of its ingredients. Built with Next.js and MongoDB.',
           links: [
             {
               linkText: 'foodprintcalculator.com',
               url: 'https://foodprintcalculator.com/',
             },
-            {
-              linkText: 'GitHub repo',
-              url: 'https://github.com/atlisg/foodprint-calculator',
-            },
           ],
           image: {
-            img: 'foodprintcalculatorpic.png',
+            img: 'spori.png',
             name: 'foodprintcalculator',
           },
         },
@@ -41,13 +37,9 @@ export default Vue.component('work', {
               linkText: 'ethicode.org',
               url: 'http://ethicode.org',
             },
-            {
-              linkText: 'GitHub repo',
-              url: 'https://github.com/atlisg/resume',
-            },
           ],
           image: {
-            img: 'ethicodepic.png',
+            img: 'ethic.png',
             name: 'ethicode',
           },
         },
@@ -59,10 +51,6 @@ export default Vue.component('work', {
             {
               linkText: 'veganbot.com',
               url: 'http://veganbot.com',
-            },
-            {
-              linkText: 'GitHub repo',
-              url: 'https://github.com/atlisg/vegan-bot',
             },
           ],
           image: {

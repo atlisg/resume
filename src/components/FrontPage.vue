@@ -14,6 +14,7 @@
           'paragraph-title-why': p.title === 'Why',
           'paragraph-title-how': p.title === 'How',
           'paragraph-title-who': p.title === 'Who',
+          'paragraph-title-what': p.title === 'What now',
         }"
       >
         {{ p.title }}
@@ -34,7 +35,9 @@
         class="picture"
         v-bind:class="`picture-${p.image.name}`"
       />
-      <p v-if="p.about" v-animate="'slide-up'" class="paragraph-about">{{ p.about }}</p>
+      <p v-if="p.about" v-animate="'slide-up'" class="paragraph-about">
+        {{ p.about }}
+      </p>
       <p v-if="p.smallText" v-animate="'slide-up'" class="paragraph-small-text">
         {{ p.smallText }}
       </p>
@@ -49,6 +52,13 @@
         :href="link.url"
         target="_blank"
         >{{ link.linkText }}</a
+      >
+      <router-link
+        v-if="p.route"
+        v-animate="'slide-up'"
+        class="paragraph-link"
+        :to="p.route.route"
+        >{{ p.route.text }}</router-link
       >
     </div>
   </div>
@@ -105,7 +115,11 @@ export default Vue.component('frontPage', {
 }
 .paragraph-title-who {
   display: inline-block;
-  transform: rotate(180deg);
+  transform: rotate(120deg);
+}
+.paragraph-title-what {
+  display: inline-block;
+  transform: rotate(200deg);
 }
 .paragraph-about {
   padding: 0;
