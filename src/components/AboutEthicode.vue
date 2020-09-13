@@ -43,15 +43,6 @@ export default Vue.component('aboutEthicode', {
       ],
     };
   },
-  methods: {
-    track() {
-      this.$ga.page({
-        page: '/about',
-        title: 'About page',
-        location: window.location.href,
-      });
-    },
-  },
 });
 </script>
 

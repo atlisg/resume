@@ -26,15 +26,6 @@ export default Vue.extend({
       convert: 'have the right to life, liberty and the pursuit of happiness.',
     };
   },
-  methods: {
-    track() {
-      this.$ga.page({
-        page: '/',
-        title: 'Front page',
-        location: window.location.href,
-      });
-    },
-  },
 });
 </script>
 

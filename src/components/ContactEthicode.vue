@@ -37,15 +37,6 @@ export default Vue.component('contactEthicode', {
       ],
     };
   },
-  methods: {
-    track() {
-      this.$ga.page({
-        page: '/contact',
-        title: 'Contact page',
-        location: window.location.href,
-      });
-    },
-  },
 });
 </script>
 

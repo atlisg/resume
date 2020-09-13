@@ -61,15 +61,6 @@ export default Vue.component('work', {
       ],
     };
   },
-  methods: {
-    track() {
-      this.$ga.page({
-        page: '/work',
-        title: 'Work page',
-        location: window.location.href,
-      });
-    },
-  },
 });
 </script>
 
