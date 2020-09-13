@@ -27,7 +27,11 @@ export default Vue.extend({
   },
   methods: {
     track() {
-      this.$ga.page('/resume');
+      this.$ga.page({
+        page: '/resume',
+        title: 'Resume page',
+        location: window.location.href,
+      });
     },
   },
 });

@@ -28,7 +28,11 @@ export default Vue.extend({
   },
   methods: {
     track() {
-      this.$ga.page('/');
+      this.$ga.page({
+        page: '/',
+        title: 'Front page',
+        location: window.location.href,
+      });
     },
   },
 });
