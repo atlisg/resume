@@ -289,6 +289,44 @@ export default Vue.extend({
   opacity: 1;
 }
 
+@-webkit-keyframes fadein {
+  from {
+    -webkit-opacity: 0;
+  }
+  to {
+    -webkit-opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeInBottom {
+  from {
+    -webkit-opacity: 0;
+    -webkit-transform: translateY(100%);
+  }
+  to {
+    -webkit-opacity: 1;
+  }
+}
+
+@-webkit-keyframes wiggle {
+  77% {
+    -webkit-transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+  80%,
+  86%,
+  92% {
+    -webkit-transform: scale(1.1) rotateZ(1deg);
+  }
+  83%,
+  89%,
+  95% {
+    -webkit-transform: scale(1.1) rotateZ(-1deg);
+  }
+  98% {
+    -webkit-transform: scale(1) rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+}
+
 @keyframes fadein {
   from {
     opacity: 0;
