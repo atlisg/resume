@@ -281,10 +281,12 @@ export default Vue.extend({
   transition-timing-function: ease-in-out;
 }
 .slide-up {
+  -webkit-transform: translateY(100px);
   transform: translateY(100px);
   opacity: 0;
 }
 .slide-up.animate-active {
+  -webkit-transform: translateY(0);
   transform: translateY(0);
   opacity: 1;
 }

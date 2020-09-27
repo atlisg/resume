@@ -109,18 +109,22 @@ export default Vue.component('frontPage', {
 }
 .paragraph-title-why {
   display: inline-block;
+  -webkit-transform: rotate(60deg);
   transform: rotate(60deg);
 }
 .paragraph-title-how {
   display: inline-block;
+  -webkit-transform: rotate(300deg);
   transform: rotate(300deg);
 }
 .paragraph-title-who {
   display: inline-block;
+  -webkit-transform: rotate(120deg);
   transform: rotate(120deg);
 }
 .paragraph-title-what {
   display: inline-block;
+  -webkit-transform: rotate(200deg);
   transform: rotate(200deg);
 }
 .paragraph-about {
