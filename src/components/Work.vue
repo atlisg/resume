@@ -39,7 +39,7 @@ export default Vue.component('work', {
             },
           ],
           image: {
-            img: 'ethic.png',
+            img: 'ethicodeorg.png',
             name: 'ethicode',
           },
         },
@@ -72,7 +72,7 @@ export default Vue.component('work', {
   font-size: 36px;
   text-align: left;
   line-height: 50px;
-  color: #9c27b0;
+  color: #222;
   animation: fadeInBottom 1s;
 }
 

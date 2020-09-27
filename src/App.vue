@@ -47,8 +47,10 @@
           'menu-item-first': page.route === '/',
         }"
         :to="page.route"
-        >{{ page.name }}</router-link
       >
+        {{ page.name }}
+        <img v-if="page.route === '/'" :src="getImgUrl()" alt="ethicode-logo" class="logo"
+      /></router-link>
     </div>
     <router-view />
   </div>
@@ -110,7 +112,7 @@ export default Vue.extend({
       ],
       mainPages: [
         {
-          name: '<Ethicode/>',
+          name: '',
           route: '/',
         },
         {
@@ -136,28 +138,33 @@ export default Vue.extend({
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
-    handleScroll: function() {
+    handleScroll: function () {
       this.isScrolled = window.scrollY > 50;
     },
-    next: function() {
+    next: function () {
       const currentIndex = this.pages.indexOf(
-        this.pages.find(page => page.name === this.$route.name),
+        this.pages.find((page) => page.name === this.$route.name),
       );
       if (currentIndex + 1 === this.pages.length) return;
       const nextPage = this.pages[currentIndex + 1];
       this.$router.push(nextPage.route);
     },
-    back: function() {
+    back: function () {
       const currentIndex = this.pages.indexOf(
-        this.pages.find(page => page.name === this.$route.name),
+        this.pages.find((page) => page.name === this.$route.name),
       );
       if (currentIndex === 0) return;
       const nextPage = this.pages[currentIndex - 1];
       this.$router.push(nextPage.route);
     },
-    isResume: function() {
+    isResume: function () {
       const pathSplit = this.$route.path.split('/');
       return pathSplit[1] === 'resume';
+    },
+    getImgUrl: function () {
+      const version =
+        this.$route.path === '/work' || this.$route.path === '/contact' ? 'black' : 'white';
+      return require(`./assets/ethicode-logo-${version}.png`);
     },
   },
 });
@@ -165,7 +172,7 @@ export default Vue.extend({
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -196,7 +203,7 @@ export default Vue.extend({
 .menu {
   position: fixed;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   width: calc(100% - 40px);
   padding: 20px;
   background-color: #cddc39;
@@ -204,8 +211,8 @@ export default Vue.extend({
   z-index: 2;
 }
 .menu-main {
-  width: calc(100% - 10px);
-  padding: 20px 5px;
+  width: calc(100% - 35px);
+  padding: 20px 20px;
   background-color: #222;
   color: #eee;
 }
@@ -215,7 +222,7 @@ export default Vue.extend({
 }
 .menu-item {
   display: none;
-  margin: 0 15px;
+  margin-right: 10px;
   font-size: 16px;
   font-weight: bold;
   color: #222;
@@ -235,7 +242,7 @@ export default Vue.extend({
 }
 .menu-item:hover,
 .menu-item-active {
-  color: #9c27b0;
+  color: #f0006d;
   transition: color 0.2s ease-in-out;
 }
 .home {
@@ -249,7 +256,11 @@ export default Vue.extend({
   margin-left: -20px;
 }
 .menu-item-first {
+  display: flex;
   margin-right: auto;
+}
+.logo {
+  width: 80px;
 }
 .menu-nav {
   background: url('./assets/back.svg') no-repeat;
@@ -315,14 +326,14 @@ export default Vue.extend({
   }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 800px) {
+  .logo {
+    width: 100px;
+  }
   .menu-main {
     width: calc(100% - 60px);
     padding: 30px;
   }
-}
-
-@media screen and (min-width: 800px) {
   .page-container {
     padding: 0 45px 50px;
     background-color: #eee;
@@ -338,6 +349,11 @@ export default Vue.extend({
   }
   .menu-item {
     display: block;
+    margin: 0 15px;
+  }
+  .menu-item-first {
+    display: flex;
+    margin-right: auto;
   }
   .home {
     left: 60px;

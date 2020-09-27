@@ -70,7 +70,7 @@ import Vue from 'vue';
 export default Vue.component('frontPage', {
   props: ['paragraphs', 'isContact'],
   methods: {
-    getImgUrl: function(pic) {
+    getImgUrl: function (pic) {
       return require('../assets/' + pic);
     },
   },
@@ -102,8 +102,9 @@ export default Vue.component('frontPage', {
   font-size: 32px;
   margin: 0;
   padding: 30px 0 20px;
-  color: #e91e63;
+  color: #f0006d;
   animation: fadeInBottom 0.5s;
+  font-style: italic;
 }
 .paragraph-title-why {
   display: inline-block;
@@ -123,7 +124,7 @@ export default Vue.component('frontPage', {
 }
 .paragraph-about {
   padding: 0;
-  color: #9c27b0;
+  color: #ffd300;
   font-size: 24px;
   font-style: italic;
   animation: fadeInBottom 0.5s;
@@ -151,7 +152,7 @@ export default Vue.component('frontPage', {
   padding: 10px 0;
   margin-right: 40px;
   text-decoration: none;
-  color: #3f51b5;
+  color: #00bad4;
   font-size: 21px;
   animation: fadeInBottom 0.7s;
 }
@@ -194,6 +195,7 @@ export default Vue.component('frontPage', {
   .paragraph-link {
     display: inline-block;
     padding: 30px 0;
+    font-size: 24px;
   }
   .picture {
     padding: 0;
