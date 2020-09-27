@@ -64,6 +64,7 @@ export default Vue.extend({
   line-height: 48px;
   color: #eee;
   font-style: italic;
+  -webkit-animation: fadeInBottom 1s;
   animation: fadeInBottom 1s;
 }
 .where-sentient {
@@ -79,6 +80,7 @@ export default Vue.extend({
   text-align: left;
   font-style: italic;
   line-height: 24px;
+  -webkit-animation: fadeInBottom 1.5s;
   animation: fadeInBottom 1.5s;
 }
 .pink {

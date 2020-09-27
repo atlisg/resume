@@ -55,6 +55,7 @@ export default Vue.component('aboutEthicode', {
   text-align: left;
   line-height: 50px;
   color: #00bad4;
+  -webkit-animation: fadeInBottom 1s;
   animation: fadeInBottom 1s;
 }
 

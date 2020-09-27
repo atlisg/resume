@@ -73,6 +73,7 @@ export default Vue.component('work', {
   text-align: left;
   line-height: 50px;
   color: #222;
+  -webkit-animation: fadeInBottom 1s;
   animation: fadeInBottom 1s;
 }
 

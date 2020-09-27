@@ -103,6 +103,7 @@ export default Vue.component('frontPage', {
   margin: 0;
   padding: 30px 0 20px;
   color: #f0006d;
+  -webkit-animation: fadeInBottom 0.5s;
   animation: fadeInBottom 0.5s;
   font-style: italic;
 }
@@ -127,12 +128,14 @@ export default Vue.component('frontPage', {
   color: #ffd300;
   font-size: 24px;
   font-style: italic;
+  -webkit-animation: fadeInBottom 0.5s;
   animation: fadeInBottom 0.5s;
 }
 .paragraph-text {
   padding: 0;
   color: #eee;
   font-size: 24px;
+  -webkit-animation: fadeInBottom 0.7s;
   animation: fadeInBottom 0.7s;
 }
 .paragraph-small-text {
@@ -140,6 +143,7 @@ export default Vue.component('frontPage', {
   padding: 0;
   color: #222;
   font-size: 18px;
+  -webkit-animation: fadeInBottom 0.7s;
   animation: fadeInBottom 0.7s;
 }
 .paragraph-text-contact {
@@ -154,6 +158,7 @@ export default Vue.component('frontPage', {
   text-decoration: none;
   color: #00bad4;
   font-size: 21px;
+  -webkit-animation: fadeInBottom 0.7s;
   animation: fadeInBottom 0.7s;
 }
 .paragraph-link:hover {
@@ -163,6 +168,7 @@ export default Vue.component('frontPage', {
   display: block;
   padding: 0;
   width: 100%;
+  -webkit-animation: fadeInBottom 0.7s;
   animation: fadeInBottom 0.7s;
 }
 

@@ -40,6 +40,7 @@ export default Vue.component('continueButton', {
   font-size: 24px;
   color: #2c3e50;
   padding: 15px 30px;
+  -webkit-animation: fadeInBottom 1s;
   animation: fadeInBottom 1s;
   text-decoration: none;
   box-shadow: none;
