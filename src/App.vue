@@ -58,7 +58,6 @@
 
 <script>
 import Vue from 'vue';
-import VueAnimate from 'vue-animate-scroll';
 import VueAnalytics from 'vue-analytics';
 import router from './router';
 import pageHeader from './components/PageHeader';
@@ -66,7 +65,6 @@ import textBody from './components/TextBody';
 import frontPage from './components/FrontPage';
 import continueButton from './components/Continue';
 
-Vue.use(VueAnimate);
 Vue.use(VueAnalytics, {
   id: 'UA-113130296-2',
   router,
@@ -303,7 +301,7 @@ export default Vue.extend({
 @-webkit-keyframes fadeInBottom {
   from {
     -webkit-opacity: 0;
-    -webkit-transform: translateY(100%);
+    -webkit-transform: -webkit-translateY(100%);
   }
   to {
     -webkit-opacity: 1;
