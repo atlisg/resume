@@ -1,6 +1,7 @@
 <template>
   <div class="page-container">
-    <h2 v-animate="'slide-up'" class="main-title">{{ mainTitle }}</h2>
+    <h2 v-if="$route.path === '/'" v-animate="'slide-up'" class="main-title">{{ mainTitle }}</h2>
+    <h2 v-else class="main-title">{{ mainTitle }}</h2>
     <frontPage v-bind:paragraphs="paragraphs" v-bind:isContact="true" />
   </div>
 </template>
