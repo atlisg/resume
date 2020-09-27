@@ -1,14 +1,14 @@
 <template>
   <div class="ethicode">
     <div class="vision">
-      <h2 v-animate="'slide-up'" class="for-world pink">
+      <h2 class="for-world pink">
         {{ forWorld }}
       </h2>
-      <h3 v-animate="'slide-up'" class="where-sentient">
+      <h3 class="where-sentient">
         {{ whereSentient[0] }}
         <span class="yellow">{{ whereSentient[1] }}</span>
       </h3>
-      <h4 v-animate="'slide-up'" class="the-right">
+      <h4 class="the-right">
         {{ theRight[0] }}<span class="blue">{{ theRight[1] }}</span
         >{{ theRight[2] }}<span class="blue">{{ theRight[3] }}</span
         >{{ theRight[4] }}<span class="blue">{{ theRight[5] }}</span
