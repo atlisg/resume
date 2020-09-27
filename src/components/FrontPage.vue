@@ -1,5 +1,5 @@
 <template>
-  <div class="front-page">
+  <div v-if="$route.path === '/'" class="front-page">
     <div
       v-for="p in paragraphs"
       v-bind:key="p.title"
@@ -60,6 +60,61 @@
         :to="p.route.route"
         >{{ p.route.text }}</router-link
       >
+    </div>
+  </div>
+  <div v-else class="front-page">
+    <div
+      v-for="p in paragraphs"
+      v-bind:key="p.title"
+      class="paragraph"
+      v-bind:class="{ 'paragraph-contact': isContact }"
+    >
+      <h3
+        v-if="p.title"
+        class="paragraph-title"
+        v-bind:class="{
+          'paragraph-title-why': p.title === 'Why',
+          'paragraph-title-how': p.title === 'How',
+          'paragraph-title-who': p.title === 'Who',
+          'paragraph-title-what': p.title === 'What now',
+        }"
+      >
+        {{ p.title }}
+      </h3>
+      <p
+        v-if="p.text"
+        class="paragraph-text"
+        v-bind:class="{ 'paragraph-text-contact': isContact }"
+      >
+        {{ p.text }}
+      </p>
+      <img
+        v-if="p.image"
+        :src="getImgUrl(p.image.img)"
+        v-bind:alt="p.image.img"
+        class="picture"
+        v-bind:class="`picture-${p.image.name}`"
+      />
+      <p v-if="p.about" class="paragraph-about">
+        {{ p.about }}
+      </p>
+      <p v-if="p.smallText" class="paragraph-small-text">
+        {{ p.smallText }}
+      </p>
+      <a v-if="p.email" class="paragraph-link" :href="`mailto:${p.email}`">
+        {{ p.email }}
+      </a>
+      <a
+        v-for="link in p.links"
+        v-bind:key="link.linkText"
+        class="paragraph-link"
+        :href="link.url"
+        target="_blank"
+        >{{ link.linkText }}</a
+      >
+      <router-link v-if="p.route" class="paragraph-link" :to="p.route.route">{{
+        p.route.text
+      }}</router-link>
     </div>
   </div>
 </template>
