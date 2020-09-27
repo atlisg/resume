@@ -261,7 +261,7 @@ export default Vue.extend({
 }
 .logo {
   width: 80px;
-  height: auto;
+  height: 25px;
 }
 .menu-nav {
   background: url('./assets/back.svg') no-repeat;
@@ -330,6 +330,7 @@ export default Vue.extend({
 @media screen and (min-width: 800px) {
   .logo {
     width: 100px;
+    height: 31px;
   }
   .menu-main {
     width: calc(100% - 60px);
