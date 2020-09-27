@@ -261,6 +261,7 @@ export default Vue.extend({
 }
 .logo {
   width: 80px;
+  height: auto;
 }
 .menu-nav {
   background: url('./assets/back.svg') no-repeat;
