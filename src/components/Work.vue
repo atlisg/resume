@@ -17,7 +17,7 @@ export default Vue.component('work', {
         {
           title: 'FOOD·E',
           smallText:
-            'Released in May 2020, FOOD·E determines the environmental impact of a single meal, given a list of its ingredients. Built with Next.js and MongoDB.',
+            "Released in May 2020, FOOD·E provides the technology that allows meal creators of all kinds and sizes to evaluate their recipes' environmental impact and display the results for their consumers. Built with Next.js and MongoDB.",
           links: [
             {
               linkText: 'foodprintcalculator.com',
@@ -25,7 +25,7 @@ export default Vue.component('work', {
             },
           ],
           image: {
-            img: window.innerWidth < 600 ? 'mobile-food-e.png' : 'food-e.png',
+            img: window.innerWidth < 600 ? 'mobile-food.e.png' : 'food.e.png',
             name: 'food·e',
           },
         },
