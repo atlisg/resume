@@ -16,7 +16,7 @@
       <div
         class="menu-nav menu-nav-back"
         v-bind:class="{
-          'menu-nav-hidden': $route.path === '/',
+          'menu-nav-hidden': $route.path === '/' || $route.path === '/resume',
         }"
         v-on:click="back()"
       />
@@ -257,7 +257,7 @@ export default Vue.extend({
   margin-left: -20px;
 }
 .menu-item-first {
-  display: flex;
+  display: none;
   margin-right: auto;
 }
 .logo {
