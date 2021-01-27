@@ -19,7 +19,7 @@ export default Vue.extend({
       paragraphs: [
         {
           title: 'Frontend',
-          text: 'React.js, Angular.js, Typescript, Vue.js',
+          text: 'React.js, Next.js, Angular.js, Typescript, Vue.js',
         },
         {
           title: 'Backend',

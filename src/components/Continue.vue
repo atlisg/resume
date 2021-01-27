@@ -38,6 +38,7 @@ export default Vue.component('continueButton', {
   background-color: white;
   border: 2px solid #2c3e50;
   font-size: 24px;
+  font-weight: bold;
   color: #2c3e50;
   padding: 15px 30px;
   -webkit-animation: fadeInBottom 1s;
@@ -48,17 +49,17 @@ export default Vue.component('continueButton', {
 }
 .hover-slide:hover,
 .hover-slide:focus {
-  box-shadow: inset 260px 0 0 0 #cddc39;
+  box-shadow: inset 260px 0 0 0 #e91e6361;
   transition: box-shadow 0.5s ease;
 }
 .hover-fill:hover,
 .hover-fill:focus {
-  box-shadow: inset 0 0 0 35px #cddc39;
+  box-shadow: inset 0 0 0 35px #e91e6361;
   transition: box-shadow 0.5s ease;
 }
 .hover-up:hover,
 .hover-up:focus {
-  box-shadow: inset 0 -70px 0 0 #cddc39;
+  box-shadow: inset 0 -70px 0 0 #e91e6361;
   transition: box-shadow 0.5s ease;
 }
 .forward-icon {

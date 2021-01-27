@@ -24,7 +24,7 @@ export default Vue.extend({
         {
           title: 'Passion',
           text:
-            "My passion, my 'why', is to reduce suffering for sentient animals, human and non-human and to improve our treatment of Earth, our only home.",
+            "My passion – my 'why' – is to advocate for life-changing improvements, whether it's fighting for animal rights and environmental justice or rethinking and redefining the status quo in whatever grabs my attention.",
         },
         {
           title: 'Coding',
@@ -34,7 +34,7 @@ export default Vue.extend({
         {
           title: 'Family',
           text:
-            "My wife and I have two kids, age 3 and 6, and two dogs, age 8 and 14. We lived in Hafnarfjörður before moving to Garður, Suðurnesjabær in January 2017. We love the calm, quiet life here and being so close to Iceland's wilderness.",
+            "My wife and I have two kids, ages 4 and 7, and a 9 year old dog. We lived in Hafnarfjörður before moving to Garður, Suðurnesjabær in January 2017. We love the calm, quiet life here and being so close to Iceland's wilderness.",
         },
       ],
     };

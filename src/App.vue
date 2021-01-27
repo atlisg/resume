@@ -138,30 +138,30 @@ export default Vue.extend({
     window.removeEventListener('scroll', this.handleScroll);
   },
   methods: {
-    handleScroll: function () {
+    handleScroll: function() {
       this.isScrolled = window.scrollY > 50;
     },
-    next: function () {
+    next: function() {
       const currentIndex = this.pages.indexOf(
-        this.pages.find((page) => page.name === this.$route.name),
+        this.pages.find(page => page.name === this.$route.name),
       );
       if (currentIndex + 1 === this.pages.length) return;
       const nextPage = this.pages[currentIndex + 1];
       this.$router.push(nextPage.route);
     },
-    back: function () {
+    back: function() {
       const currentIndex = this.pages.indexOf(
-        this.pages.find((page) => page.name === this.$route.name),
+        this.pages.find(page => page.name === this.$route.name),
       );
       if (currentIndex === 0) return;
       const nextPage = this.pages[currentIndex - 1];
       this.$router.push(nextPage.route);
     },
-    isResume: function () {
+    isResume: function() {
       const pathSplit = this.$route.path.split('/');
       return pathSplit[1] === 'resume';
     },
-    getImgUrl: function () {
+    getImgUrl: function() {
       const version =
         this.$route.path === '/work' || this.$route.path === '/contact' ? 'black' : 'white';
       return require(`./assets/ethicode-logo-${version}.png`);
@@ -188,6 +188,7 @@ export default Vue.extend({
 .page-container {
   padding: 0 20px 50px;
   background-color: #eee;
+  min-height: 100vh;
 }
 .page-container-dark {
   background-color: #222;
@@ -195,7 +196,7 @@ export default Vue.extend({
 .bkgr {
   position: fixed;
   background-image: url('./assets/tveir_i_sjotta.jpg');
-  opacity: 0.3;
+  opacity: 0.2;
   height: 100%;
   width: 100%;
   z-index: -1;
@@ -206,7 +207,7 @@ export default Vue.extend({
   align-items: flex-end;
   width: calc(100% - 40px);
   padding: 20px;
-  background-color: #cddc39;
+  background: transparent;
   transition: background-color 0.3s ease-in-out;
   z-index: 2;
 }
@@ -242,7 +243,7 @@ export default Vue.extend({
 }
 .menu-item:hover,
 .menu-item-active {
-  color: #f0006d;
+  color: #e91e63;
   transition: color 0.2s ease-in-out;
 }
 .home {

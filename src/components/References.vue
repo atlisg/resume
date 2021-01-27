@@ -35,7 +35,7 @@ export default Vue.extend({
         {
           title: 'Ingimar Þór Friðriksson, Kópavogsbær IT Department Director',
           text:
-            'Ingimar was the driving force behind getting this project through the door for the town of Kópavogur. He was the man with the vision, the man we relentlessly asked for details, when we were unsure. He was always full of answers and always with a sparkle in his eyes when talking about the project. It was thoroughly enjoying working with him and we all learned a lot about what pure drive and inspiration looks like.',
+            'Ingimar was the driving force behind getting the HFP project through the door for the town of Kópavogur. He was the man with the vision, the man we relentlessly asked for details, when we were unsure. He was always full of answers and always with a sparkle in his eyes when talking about the project. I thoroughly enjoyed working with him and we all learned a lot about what pure drive and inspiration looks like.',
         },
       ],
     };

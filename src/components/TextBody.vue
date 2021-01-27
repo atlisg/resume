@@ -24,7 +24,7 @@ import Vue from 'vue';
 export default Vue.component('textBody', {
   props: ['paragraphs'],
   methods: {
-    getImgUrl: function (pic) {
+    getImgUrl: function(pic) {
       return require('../assets/' + pic);
     },
   },
@@ -42,6 +42,7 @@ export default Vue.component('textBody', {
 }
 .paragraph-title {
   font-size: 24px;
+  font-weight: bold;
   margin: 0;
   padding: 20px 20px 0;
   margin-top: 30px;
@@ -57,6 +58,7 @@ export default Vue.component('textBody', {
 .paragraph-text {
   padding: 0 20px;
   font-size: 18px;
+  line-height: 1.5;
   animation: fadeInBottom 0.7s;
 }
 .paragraph-link {

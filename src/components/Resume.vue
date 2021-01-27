@@ -17,7 +17,7 @@ export default Vue.extend({
   data() {
     return {
       subTitle: 'Welcome to my',
-      mainTitle: 'RÉSUMÉ',
+      mainTitle: 'RESUME',
       fullName: 'Atli Sævar Guðmundsson',
       job: 'Software Engineer',
       pdfText: 'Download PDF',
