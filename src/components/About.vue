@@ -24,7 +24,7 @@ export default Vue.extend({
         {
           title: 'Passion',
           text:
-            "My passion – my 'why' – is to advocate for life-changing improvements, whether it's fighting for animal rights and environmental justice or rethinking and redefining the status quo in whatever grabs my attention.",
+            "My passion – my 'why' – is to advocate for life-changing improvements, whether it's fighting for animal rights and environmental justice or rethinking and redefining the status quo in whatever grabs my imagination.",
         },
         {
           title: 'Coding',
