@@ -17,15 +17,10 @@ export default Vue.extend({
   name: 'About',
   data() {
     return {
-      mainTitle: 'So much Atli',
+      mainTitle: 'Such Atli',
       buttonText: 'Keep talking',
       nextRoute: '/resume/experience',
       paragraphs: [
-        {
-          title: 'Passion',
-          text:
-            "My passion – my 'why' – is to advocate for life-changing improvements, whether it's fighting for animal rights and environmental justice or rethinking and redefining the status quo in whatever grabs my imagination.",
-        },
         {
           title: 'Coding',
           text:
@@ -35,6 +30,11 @@ export default Vue.extend({
           title: 'Family',
           text:
             "My wife and I have two kids, ages 4 and 7, and a 9 year old dog. We lived in Hafnarfjörður before moving to Garður, Suðurnesjabær in January 2017. We love the calm, quiet life here and being so close to Iceland's wilderness.",
+        },
+        {
+          title: 'Mission',
+          text:
+            "The human being is an amazing animal with its unparalleled language skills, ability to infer others' mental states, and instinct for cooperation. But it's also a bit embarrassing, considering its treatment of the vulnerable, and the Earth, its only home. My mission as a human is to contribute towards animal liberation, environmental justice, human rights, or wherever fairness needs to be elevated.",
         },
       ],
     };

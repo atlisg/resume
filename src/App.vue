@@ -1,12 +1,15 @@
 <template>
   <div id="app" v-bind:class="{ frontground: !isResume() }">
-    <div v-if="isResume()" class="bkgr" />
+    <div v-if="$route.path === '/resume'" class="bkgr" />
+    <div v-if="$route.path !== '/resume'" class="bkgr2" />
+    <div v-if="$route.path === '/resume'" class="behind" />
     <div v-if="isResume()" class="menu menu-resume" v-bind:class="{ 'menu-scrolled': isScrolled }">
       <router-link
         v-for="page in pages"
         v-bind:key="page.name"
         v-bind:class="{
           'menu-item': true,
+          'menu-item-dark': $route.path === '/resume',
           'menu-item-active': page.route === $route.path,
           'menu-item-first': page.route === '/resume',
         }"
@@ -145,8 +148,7 @@ export default Vue.extend({
       const currentIndex = this.pages.indexOf(
         this.pages.find(page => page.name === this.$route.name),
       );
-      if (currentIndex + 1 === this.pages.length) return;
-      const nextPage = this.pages[currentIndex + 1];
+      const nextPage = this.pages[(currentIndex + 1) % this.pages.length];
       this.$router.push(nextPage.route);
     },
     back: function() {
@@ -172,11 +174,11 @@ export default Vue.extend({
 
 <style>
 #app {
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #eee;
   margin: 0;
   height: max-content;
   width: 100%;
@@ -186,27 +188,42 @@ export default Vue.extend({
   background-color: #222;
 }
 .page-container {
-  padding: 0 20px 50px;
-  background-color: #eee;
+  padding: 0 0 50px;
+  background: transparent;
   min-height: 100vh;
+  color: #222;
 }
 .page-container-dark {
   background-color: #222;
 }
-.bkgr {
+.bkgr,
+.bkgr2 {
   position: fixed;
-  background-image: url('./assets/tveir_i_sjotta.jpg');
-  opacity: 0.2;
+  background-image: url('../static/atli.png');
+  background-size: 100vw;
+  opacity: 0.3;
   height: 100%;
   width: 100%;
   z-index: -1;
+}
+.bkgr2 {
+  background-image: url('./assets/tveir_i_sjotta.jpg');
+  background-size: 200vw;
+  opacity: 0.2;
+}
+.behind {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: #222;
+  z-index: -2;
 }
 .menu {
   position: fixed;
   display: flex;
   align-items: flex-end;
-  width: calc(100% - 40px);
-  padding: 20px;
+  width: 100%;
+  padding: 40px 0;
   background: transparent;
   transition: background-color 0.3s ease-in-out;
   z-index: 2;
@@ -225,7 +242,6 @@ export default Vue.extend({
   display: none;
   margin-right: 10px;
   font-size: 16px;
-  font-weight: bold;
   color: #222;
   border: none;
   background: none;
@@ -233,6 +249,9 @@ export default Vue.extend({
   text-decoration: none;
   transition: color 0.2s ease-in-out;
   transform: translateY(0);
+}
+.menu-item-dark {
+  color: #eee;
 }
 .menu-item-main {
   display: block;
@@ -268,10 +287,11 @@ export default Vue.extend({
   background: url('./assets/back.svg') no-repeat;
   width: 50%;
   height: 40px;
-  margin: 0 10px;
+  margin: 0;
 }
 .menu-nav-next {
   transform: rotate(180deg);
+  margin: 0;
 }
 .menu-nav-hidden {
   opacity: 0;
@@ -381,13 +401,14 @@ export default Vue.extend({
   }
   .page-container {
     padding: 0 45px 50px;
-    background-color: #eee;
   }
   .page-container-dark {
     background-color: #222;
   }
   .menu {
     justify-content: flex-end;
+    width: calc(100% - 40px);
+    padding: 40px 20px;
   }
   .menu-main {
     display: flex;
@@ -405,6 +426,10 @@ export default Vue.extend({
   }
   .menu-nav {
     display: none;
+  }
+  .bkgr,
+  .bkgr2 {
+    background-size: auto;
   }
 }
 

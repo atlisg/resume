@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <pageHeader v-bind:mainTitle="subTitle" />
+    <h3>{{ subTitle }}</h3>
     <h1>{{ mainTitle }}</h1>
     <h3>{{ fullName }}</h3>
     <h4>{{ job }}</h4>
@@ -17,7 +17,7 @@ export default Vue.extend({
   data() {
     return {
       subTitle: 'Welcome to my',
-      mainTitle: 'RESUME',
+      mainTitle: 'Resume',
       fullName: 'Atli Sævar Guðmundsson',
       job: 'Software Engineer',
       pdfText: 'Download PDF',
@@ -30,20 +30,23 @@ export default Vue.extend({
 
 <style scoped>
 h1 {
-  margin: 0;
+  margin: 30px 0;
   font-size: 72px;
+  font-weight: normal;
   color: #e91e63;
   animation: fadeInBottom 0.7s;
 }
 h3 {
   margin: 0;
   font-size: 48px;
+  font-weight: normal;
   animation: fadeInBottom 1s;
 }
 h4 {
   margin: 0;
   font-size: 32px;
-  color: #3f51b5;
+  font-weight: normal;
+  color: #ffd300;
   animation: fadeInBottom 1s;
 }
 .pdf-btn {
@@ -77,6 +80,9 @@ h4 {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-delay: 0s;
+}
+.hello {
+  padding-top: 150px;
 }
 
 @media screen and (min-width: 800px) {

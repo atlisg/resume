@@ -17,14 +17,14 @@ export default Vue.extend({
   name: 'Projects',
   data() {
     return {
-      mainTitle: 'So personal',
-      buttonText: 'Alright, alright',
+      mainTitle: 'Such moonlight',
+      buttonText: 'Continue',
       nextRoute: '/resume/education',
       paragraphs: [
         {
-          title: 'FoodprintCalculator.com',
+          title: 'FOOD·E',
           text:
-            'Released in May 2020, the Foodprint Calculator determines the environmental impact of a single meal, given a list of its ingredients and their weight. Built with Next.js and MongoDB.',
+            'Released in May 2020, FOOD·E is helping food professionals promote the sustainability of their food. Built with Next.js and MongoDB.',
           links: [
             {
               linkText: 'foodprintcalculator.com',
@@ -37,9 +37,9 @@ export default Vue.extend({
           ],
         },
         {
-          title: 'Ethicode.org',
+          title: 'Ethicode',
           text:
-            "I created this project in March 2020 to familiarize myself with the Javascript framework Vue.js, originally to create an online résumé but then morphed into a frontpage for Ethicode. At first glance, I really like it. At least for a small project like this to whip up in no time, it's a great fit. I used a template to kickstart a project with webpack and typescript and I was impressed with the quick reload time and the learning curve was very minimal, as I have quite a bit of experience in React.js and Angular.js.",
+            'Created in March 2020, the homepage for Ethicode was originally built with Vue.js but after experimenting with that framework a bit, I decided to rewrite this project using Next.js.',
           links: [
             {
               linkText: 'ethicode.org',
@@ -47,18 +47,14 @@ export default Vue.extend({
             },
             {
               linkText: 'GitHub repo',
-              url: 'https://github.com/atlisg/resume',
-            },
-            {
-              linkText: 'Template used',
-              url: 'https://github.com/ryutamaki/vue-template-webpack-typescript',
+              url: 'https://github.com/ethicodeorg/website',
             },
           ],
         },
         {
           title: 'VeganBot.com',
           text:
-            'VeganBot provides answers to frequently asked questions about veganism, as well as counter arguments for common justifications for animal abuse. The aim is to educate and train people in the vegan conversation, so that veganism can spread even faster. The idea for this project was born in the final year of my degree and I worked on it on and off after graduating and in May 2018 it was released. The client was built with TypeScript/Angular.js, the server with Node.js and then some Python scripts to gather the content.',
+            'Deployed in May 2018, VeganBot educates and trains people in the vegan conversation, to help veganism spread even faster. The client was built with TypeScript/Angular.js, the server with Node.js and then some Python scripts to gather the content.',
           links: [
             {
               linkText: 'veganbot.com',

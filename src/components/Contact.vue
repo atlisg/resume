@@ -2,6 +2,12 @@
   <div class="page-container">
     <pageHeader v-bind:mainTitle="mainTitle" />
     <textBody v-bind:paragraphs="paragraphs" />
+    <continueButton
+      v-bind:buttonText="buttonText"
+      v-bind:route="nextRoute"
+      v-bind:hoverSlide="true"
+      v-bind:hideArrow="true"
+    />
   </div>
 </template>
 
@@ -12,7 +18,9 @@ export default Vue.extend({
   name: 'Contact',
   data() {
     return {
-      mainTitle: 'So many ways',
+      mainTitle: 'Such chat',
+      buttonText: 'Again!',
+      nextRoute: '/resume',
       paragraphs: [
         {
           title: 'Email',

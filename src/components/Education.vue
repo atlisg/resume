@@ -17,15 +17,15 @@ export default Vue.extend({
   name: 'About',
   data() {
     return {
-      mainTitle: 'So many lessons',
-      buttonText: 'Yes, yes',
+      mainTitle: 'Such lessons',
+      buttonText: 'Carry on',
       nextRoute: '/resume/references',
       paragraphs: [
         {
           title: 'Reykjavík University, Aug 2013 - May 2016',
           about: 'BSc in Computer Science, Grade: 9.32',
           text:
-            'I started my Computer Science studies completely clueless about the profession. I had only wanted to create more stable and higher income for my family since my girlfriend was pregnant. Luckily, it was a perfect fit, I enjoyed my courses a lot and had some natural talent to tackle the problems in front of me. I also met some great people there, some of whom I am still friends with today.',
+            'I started my Computer Science studies completely clueless about the field. I had only wanted to create more stable and higher income for my family since my girlfriend was pregnant. Luckily, it was a perfect fit, I enjoyed my courses a lot and had some natural talent to tackle the problems in front of me. I also met some great people there, some of whom I am still friends with today.',
         },
         {
           title: 'SAE Institude, Liverpool, Sep 2005 - Sep 2006',

@@ -13,25 +13,25 @@ export default Vue.extend({
   name: 'About',
   data() {
     return {
-      mainTitle: 'So much skill',
+      mainTitle: 'Such expertise',
       buttonText: 'Go on',
       nextRoute: '/resume/projects',
       paragraphs: [
         {
           title: 'Frontend',
-          text: 'React.js, Next.js, Angular.js, Typescript, Vue.js',
+          text: 'React.js, Next.js, Typescript, Angular.js, Vue.js',
         },
         {
           title: 'Backend',
           text: 'Python, Node.js, C++, Java',
         },
         {
-          title: 'Databases',
-          text: 'MySQL, ElasticSearch, MongoDB',
-        },
-        {
           title: 'Deployments',
           text: 'Kubernetes, Elastic Beanstalk, Code Pipeline, Docker',
+        },
+        {
+          title: 'Databases',
+          text: 'MySQL, ElasticSearch, MongoDB',
         },
       ],
     };

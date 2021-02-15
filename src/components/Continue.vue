@@ -10,7 +10,7 @@
     :to="route"
   >
     {{ buttonText }}
-    <span class="forward-icon" />
+    <span v-if="!hideArrow" class="forward-icon" />
   </router-link>
 </template>
 
@@ -25,6 +25,7 @@ export default Vue.component('continueButton', {
     hoverSlide: Boolean,
     hoverFill: Boolean,
     hoverUp: Boolean,
+    hideArrow: Boolean,
   },
 });
 </script>
@@ -35,11 +36,9 @@ export default Vue.component('continueButton', {
   justify-content: center;
   margin: 30px auto;
   width: max-content;
-  background-color: white;
-  border: 2px solid #2c3e50;
+  background-color: #b6ebff;
   font-size: 24px;
-  font-weight: bold;
-  color: #2c3e50;
+  color: #222;
   padding: 15px 30px;
   -webkit-animation: fadeInBottom 1s;
   animation: fadeInBottom 1s;
@@ -71,6 +70,7 @@ export default Vue.component('continueButton', {
   opacity: 0.8;
 }
 .animation-wiggle {
+  background-color: #18aeb5;
   animation-name: wiggle;
   animation-duration: 5s;
   animation-iteration-count: infinite;

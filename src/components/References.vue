@@ -13,8 +13,8 @@ export default Vue.extend({
   name: 'References',
   data() {
     return {
-      mainTitle: 'So many mentors',
-      buttonText: 'Interesting',
+      mainTitle: 'Such mentors',
+      buttonText: "Let's talk",
       nextRoute: '/resume/contact',
       paragraphs: [
         {

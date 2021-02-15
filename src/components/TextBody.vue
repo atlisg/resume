@@ -34,36 +34,33 @@ export default Vue.component('textBody', {
 <style scoped>
 .text-body {
   max-width: 800px;
-  margin: 30px auto 0;
+  margin: 50px auto 0;
   background: white;
   text-align: left;
-  padding: 0 0 20px;
-  box-shadow: 2px 2px 7px 1px rgba(0, 0, 0, 0.25);
+  padding: 20px;
 }
 .paragraph-title {
   font-size: 24px;
-  font-weight: bold;
   margin: 0;
-  padding: 20px 20px 0;
-  margin-top: 30px;
+  padding: 20px 0 0;
   color: #e91e63;
   animation: fadeInBottom 0.5s;
 }
 .paragraph-about {
-  padding: 0 20px;
+  padding: 0;
   font-size: 14px;
   font-style: italic;
   animation: fadeInBottom 0.5s;
 }
 .paragraph-text {
-  padding: 0 20px;
+  padding: 0;
   font-size: 18px;
   line-height: 1.5;
   animation: fadeInBottom 0.7s;
 }
 .paragraph-link {
   display: block;
-  padding: 0 20px;
+  padding: 0;
   text-decoration: none;
   color: #3f51b5;
   animation: fadeInBottom 0.7s;

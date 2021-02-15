@@ -17,7 +17,7 @@ export default Vue.extend({
   name: 'Experience',
   data() {
     return {
-      mainTitle: 'So much work',
+      mainTitle: 'Such work',
       buttonText: "I'm listening",
       nextRoute: '/resume/skills',
       paragraphs: [
@@ -26,7 +26,7 @@ export default Vue.extend({
           about:
             'Dohop provides virtual interline platforms for airlines, i.e. a flight search and booking engine to connect with other airlines.',
           text:
-            "I've been so lucky to work with a lot of excellent people at Dohop. I've learned so much and evolved as an engineer and as a person. During my time at Dohop I have spent most of my time working on our biggest partner platform, easyJet.",
+            "I'm so grateful for working with a lot of excellent people at Dohop. I've learned so much from them and have evolved as an engineer and as a person. During my time at Dohop I have spent most of my time working on our biggest partner platform, easyJet.",
           links: [
             {
               linkText: 'dohop.com',
