@@ -17,7 +17,7 @@ export default Vue.extend({
   name: 'Projects',
   data() {
     return {
-      mainTitle: 'Such extras',
+      mainTitle: 'Such showcase',
       buttonText: 'Continue',
       nextRoute: '/resume/education',
       paragraphs: [
